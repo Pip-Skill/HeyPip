@@ -110,7 +110,7 @@ function validateFileUpload(file: File) {
 #### ❌ NEVER Concatenate SQL
 ```typescript
 // DANGEROUS - SQL Injection vulnerability
-const query = `SELECT * FROM users WHERE email = '${userEmail}'`
+const query = `SELECT * FROM users WHERE email = '{userEmail}'`
 await db.query(query)
 ```
 
@@ -144,7 +144,7 @@ localStorage.setItem('token', token)
 
 // ✅ CORRECT: httpOnly cookies
 res.setHeader('Set-Cookie',
-  `token=${token}; HttpOnly; Secure; SameSite=Strict; Max-Age=3600`)
+  `token={token}; HttpOnly; Secure; SameSite=Strict; Max-Age=3600`)
 ```
 
 #### Authorization Checks
@@ -253,7 +253,7 @@ export async function POST(request: Request) {
 #### SameSite Cookies
 ```typescript
 res.setHeader('Set-Cookie',
-  `session=${sessionId}; HttpOnly; Secure; SameSite=Strict`)
+  `session={sessionId}; HttpOnly; Secure; SameSite=Strict`)
 ```
 
 #### Verification Steps
@@ -433,7 +433,7 @@ test('requires authentication', async () => {
 // Test authorization
 test('requires admin role', async () => {
   const response = await fetch('/api/admin', {
-    headers: { Authorization: `Bearer ${userToken}` }
+    headers: { Authorization: `Bearer {userToken}` }
   })
   expect(response.status).toBe(403)
 })

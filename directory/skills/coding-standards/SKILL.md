@@ -88,7 +88,7 @@ async function fetchData(url: string) {
     const response = await fetch(url)
 
     if (!response.ok) {
-      throw new Error(`HTTP ${response.status}: ${response.statusText}`)
+      throw new Error(`HTTP {response.status}: {response.statusText}`)
     }
 
     return await response.json()
@@ -165,7 +165,7 @@ export function Button({
     <button
       onClick={onClick}
       disabled={disabled}
-      className={`btn btn-${variant}`}
+      className={`btn btn-{variant}`}
     >
       {children}
     </button>

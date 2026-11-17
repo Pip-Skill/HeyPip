@@ -111,9 +111,9 @@ This plugin ships the script as text (the directory accepts no shell files from 
 
 set -e
 
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+SCRIPT_DIR="$(cd "$(dirname "{BASH_SOURCE[0]}")" && pwd)"
 CONFIG_FILE="$SCRIPT_DIR/config.json"
-LEARNED_SKILLS_PATH="${HOME}/.claude/skills/learned"
+LEARNED_SKILLS_PATH="$HOME/.claude/skills/learned"
 MIN_SESSION_LENGTH=10
 
 # Load config if exists
@@ -126,7 +126,7 @@ fi
 mkdir -p "$LEARNED_SKILLS_PATH"
 
 # Get transcript path from environment (set by Claude Code)
-transcript_path="${CLAUDE_TRANSCRIPT_PATH:-}"
+transcript_path="$CLAUDE_TRANSCRIPT_PATH"
 
 if [ -z "$transcript_path" ] || [ ! -f "$transcript_path" ]; then
   exit 0

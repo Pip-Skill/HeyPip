@@ -98,7 +98,7 @@ This plugin ships the script as text (the directory accepts no shell files from 
 
 # Track tool call count (increment in a temp file)
 COUNTER_FILE="/tmp/claude-tool-count-$$"
-THRESHOLD=${COMPACT_THRESHOLD:-50}
+THRESHOLD=$COMPACT_THRESHOLD
 
 # Initialize or increment counter
 if [ -f "$COUNTER_FILE" ]; then

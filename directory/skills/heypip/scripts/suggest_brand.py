@@ -24,7 +24,7 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
-import _brand as B  # noqa: E402
+import brandlib as B  # noqa: E402
 from lookup import LIB, search  # noqa: E402
 
 SCRIPT_FOR_LANG = {"ru": "cyrillic", "uk": "cyrillic", "be": "cyrillic", "bg": "cyrillic", "sr": "cyrillic",

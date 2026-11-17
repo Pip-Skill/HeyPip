@@ -25,7 +25,7 @@ import tempfile
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
-import _brand as B  # noqa: E402
+import brandlib as B  # noqa: E402
 
 DEFAULT_SUBSETS = ["latin", "latin-ext", "cyrillic", "cyrillic-ext"]
 

@@ -19,7 +19,7 @@ interface CardProps {
 }
 
 export function Card({ children, variant = 'default' }: CardProps) {
-  return <div className={`card card-${variant}`}>{children}</div>
+  return <div className={`card card-{variant}`}>{children}</div>
 }
 
 export function CardHeader({ children }: { children: React.ReactNode }) {
@@ -347,7 +347,7 @@ export function VirtualMarketList({ markets }: { markets: Market[] }) {
     <div ref={parentRef} style={{ height: '600px', overflow: 'auto' }}>
       <div
         style={{
-          height: `${virtualizer.getTotalSize()}px`,
+          height: `{virtualizer.getTotalSize()}px`,
           position: 'relative'
         }}
       >
@@ -359,8 +359,8 @@ export function VirtualMarketList({ markets }: { markets: Market[] }) {
               top: 0,
               left: 0,
               width: '100%',
-              height: `${virtualRow.size}px`,
-              transform: `translateY(${virtualRow.start}px)`
+              height: `{virtualRow.size}px`,
+              transform: `translateY({virtualRow.start}px)`
             }}
           >
             <MarketCard market={markets[virtualRow.index]} />

@@ -130,7 +130,7 @@ async function fetchApi<T>(
   options?: RequestInit
 ): Promise<ApiResponse<T>> {
   try {
-    const response = await fetch(`/api${endpoint}`, {
+    const response = await fetch(`/api{endpoint}`, {
       ...options,
       headers: {
         'Content-Type': 'application/json',
@@ -139,7 +139,7 @@ async function fetchApi<T>(
     })
 
     if (!response.ok) {
-      return { success: false, error: `HTTP ${response.status}` }
+      return { success: false, error: `HTTP {response.status}` }
     }
 
     return await response.json()

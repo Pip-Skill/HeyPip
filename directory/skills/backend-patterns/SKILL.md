@@ -205,7 +205,7 @@ class CachedMarketRepository implements MarketRepository {
 
   async findById(id: string): Promise<Market | null> {
     // Check cache first
-    const cached = await this.redis.get(`market:${id}`)
+    const cached = await this.redis.get(`market:{id}`)
 
     if (cached) {
       return JSON.parse(cached)
@@ -216,14 +216,14 @@ class CachedMarketRepository implements MarketRepository {
 
     if (market) {
       // Cache for 5 minutes
-      await this.redis.setex(`market:${id}`, 300, JSON.stringify(market))
+      await this.redis.setex(`market:{id}`, 300, JSON.stringify(market))
     }
 
     return market
   }
 
   async invalidateCache(id: string): Promise<void> {
-    await this.redis.del(`market:${id}`)
+    await this.redis.del(`market:{id}`)
   }
 }
 ```
@@ -232,7 +232,7 @@ class CachedMarketRepository implements MarketRepository {
 
 ```typescript
 async function getMarketWithCache(id: string): Promise<Market> {
-  const cacheKey = `market:${id}`
+  const cacheKey = `market:{id}`
 
   // Try cache
   const cached = await redis.get(cacheKey)

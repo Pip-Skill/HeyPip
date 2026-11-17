@@ -11,7 +11,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
-import _brand as B  # noqa: E402
+import brandlib as B  # noqa: E402
 
 
 def main():

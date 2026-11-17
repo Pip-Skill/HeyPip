@@ -23,7 +23,7 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
-import _brand as B  # noqa: E402
+import brandlib as B  # noqa: E402
 
 ENGINE_SRC = HERE.parent / "taste"
 WORK = Path("/tmp/taste-skill")
