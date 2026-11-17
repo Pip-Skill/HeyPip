@@ -1,0 +1,23 @@
+{
+  "brand":"Ledgerly","direction":"Чистовик",
+  "summary":"Бухгалтерская книга начисто: тёплая бумага, тонкие линейки, цифры по разряду и одна маркерная полоса на главной цифре. Swiss-сетка ведёт, антиква в заголовках добавляет человечности.",
+  "fonts":{"display":"Literata","text":"Onest"},
+  "palette":[{"name":"Бумага","hex":"#F5F2EA","role":"bg · 70%"},{"name":"Чернила","hex":"#17191E","role":"text · 20%"},{"name":"Графит","hex":"#585B61","role":"muted"},{"name":"Линейка","hex":"#CBC4B5","role":"border"},{"name":"Сошлось","hex":"#1D6B4E","role":"action"},{"name":"Маркер","hex":"#F3D55B","role":"highlight"}],
+  "tiles":[
+    {"type":"type","font":"Literata","sample":"Ваши деньги. Начисто.","label":"Display · Literata 600"},
+    {"type":"color","hex":"#F5F2EA","label":"Бумага · 70%"},
+    {"type":"texture","pattern":"grid","colors":["#F5F2EA","#CBC4B5"],"label":"Разлинованный лист — линейки 1px"},
+    {"type":"color","hex":"#1D6B4E","label":"Сошлось · только действие"},
+    {"type":"words","items":["точный","тёплый","с иронией"]},
+    {"type":"type","font":"Onest","sample":"Налог отложен. Можно спать.","label":"Text · Onest"},
+    {"type":"composition","layout":"asym-left","label":"Герой: текст слева, «лист» продукта справа"},
+    {"type":"color","hex":"#F3D55B","label":"Маркер · одна цифра на экран"},
+    {"type":"reference","title":"Бухгалтерская книга 1960-х","text":"Разграфлённые страницы, цифры, выровненные по разряду, карандашные пометки на полях. Берём порядок и ритм, не ретро-стилизацию."},
+    {"type":"reference","title":"Свет рабочего стола","text":"Утренний свет из окна сбоку, мягкие длинные тени, матовая плёночная коррекция, бумага и ноутбук рядом. Никакой синевы офиса."},
+    {"type":"texture","pattern":"paper","colors":["#F5F2EA","#E9E4D8"],"label":"Тёплая бумага"},
+    {"type":"composition","layout":"split","label":"Чередование: таблица ↔ одна фраза"},
+    {"type":"prompt","title":"Hero (Flux)","text":"editorial photograph of a freelancer's desk at morning: open laptop showing a clean invoice, a paper notebook with ruled lines, a yellow highlighter, a cup of coffee; soft side window light, matte film grade, warm paper tones"},
+    {"type":"words","items":["не банк","не штраф","не стоковая улыбка","не 3D-монеты"]},
+    {"type":"texture","pattern":"grain","colors":["#E9E4D8","#585B61"],"label":"Лёгкое плёночное зерно в фото"}
+  ]
+}

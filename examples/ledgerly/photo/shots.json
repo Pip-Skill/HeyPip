@@ -1,0 +1,18 @@
+[
+  {"id":"P01","kind":"photo","use":"landing hero alt / OG image / ads","aspect":"16:9",
+   "subject":"a freelancer's wooden desk in the morning: an open silver laptop whose screen shows a soft out-of-focus light interface with neat rows, a paper notebook with fine ruled lines, a yellow highlighter with its cap off, a ceramic cup of black coffee, a small green plant",
+   "setting":"a small home studio by a tall window, light plaster wall",
+   "framing":"objects grouped in the right two thirds, calm empty wall and desk surface in the left third for a headline, camera slightly above desk height"},
+  {"id":"P02","kind":"photo","use":"landing spread «Налог отложен. Можно спать.»","aspect":"21:9",
+   "subject":"the same desk late in the evening: the laptop closed, the ruled notebook open with one line marked by a yellow highlighter stroke, a phone lying face down, a warm desk lamp switched on, an empty coffee cup",
+   "setting":"home studio at night, window behind is deep blue-black, the room is quiet",
+   "framing":"wide and low, still life in the right half, deep calm shadow area on the left for a headline, horizon of the desk at lower third"},
+  {"id":"P03","kind":"photo","use":"Instagram feed post «Оплачен»","aspect":"4:5",
+   "subject":"close-up of a freelance illustrator's hands holding a phone above a desk covered with pencil sketches; the phone screen is a soft glowing blank light panel; a moment of quiet relief, thumb resting",
+   "setting":"same home studio, morning",
+   "framing":"hands enter from the lower right, phone at the golden point, upper third left clean for a caption, face out of frame"},
+  {"id":"P04","kind":"photo","use":"Stories / Reels cover «Черновик → Чистовик»","aspect":"9:16",
+   "subject":"top-down flat lay split in two: the lower half is a chaos of crumpled receipts, scattered sticky notes and a tangled phone cable; the upper half is a single clean sheet of ruled ledger paper with one yellow highlighter stroke, the highlighter lying neatly parallel",
+   "setting":"warm off-white paper-textured tabletop",
+   "framing":"strict overhead 90 degrees, clean margins, top 14 percent and bottom 20 percent kept free of objects for platform UI, a clear diagonal transition between mess and order"}
+]

@@ -1,0 +1,20 @@
+{
+  "brand":"Lumen & Loom","direction":"Caderno — тетрадь ателье",
+  "summary":"Редакционная тишина + честный рабочий журнал. Известковые стены, тень ставен, лён, один индиго-акцент.",
+  "fonts":{"display":"Cormorant Garamond","text":"Manrope"},
+  "palette":[{"name":"cal","hex":"#F3EFE7","role":"фон 75%"},{"name":"linho","hex":"#DCD2C0","role":"линии 5%"},{"name":"pedra","hex":"#5F584E","role":"вторичный текст"},{"name":"carvão","hex":"#22201C","role":"текст 18%"},{"name":"anil","hex":"#2F3E66","role":"действие 2%"}],
+  "tiles":[
+    {"type":"type","font":"Cormorant Garamond","sample":"Сорок вещей в неделю.","label":"Display — Cormorant Garamond 500"},
+    {"type":"color","hex":"#2F3E66","label":"Anil — только действие"},
+    {"type":"texture","pattern":"linen","colors":["#F3EFE7","#DCD2C0"],"label":"Суровый лён"},
+    {"type":"composition","layout":"asym-left","label":"Текст 5 кол. слева, фото 7 справа"},
+    {"type":"words","items":["точный","солнечный","упрямый"]},
+    {"type":"reference","title":"Свет","text":"Косое солнце позднего дня через деревянные ставни; полосы тени на известковой стене; никакого рассеянного студийного света."},
+    {"type":"reference","title":"Тетрадь","text":"Рабочий журнал портного: номера, даты раскроя, имена. Моноширинный шрифт только для настоящих данных."},
+    {"type":"texture","pattern":"stripes","colors":["#F3EFE7","#DCD2C0"],"label":"Тень от ставен"},
+    {"type":"color","hex":"#22201C","label":"Carvão — текст и тёмные секции"},
+    {"type":"prompt","title":"Hero","text":"editorial photograph, hands of a seamstress pinning a raw linen shirt on a wooden cutting table, hard late-afternoon Lisbon sun through wooden shutters casting stripes of shadow on a limewashed wall, 50mm f/2.8, matte film grade, fine grain --ar 4:5 --style raw"},
+    {"type":"composition","layout":"full-bleed","label":"Полноширинное фото-пауза"},
+    {"type":"texture","pattern":"grain","colors":["#DCD2C0","#5F584E"],"label":"Плёночное зерно"}
+  ]
+}

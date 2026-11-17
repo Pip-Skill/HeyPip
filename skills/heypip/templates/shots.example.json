@@ -1,0 +1,5 @@
+[
+  {"id":"hero","kind":"photo","use":"website hero","aspect":"16:9","subject":"hand-woven linen throw folded over a worn oak bench","setting":"quiet stone room, late afternoon","framing":"wide, subject lower third, generous negative space above"},
+  {"id":"detail","kind":"photo","use":"product detail","aspect":"4:5","subject":"close-up of loose linen weave with a single pulled thread","setting":"window light","framing":"macro, shallow depth of field"},
+  {"id":"reel-open","kind":"video","use":"short-form opener","aspect":"9:16","duration":4,"subject":"hands smoothing linen on a table","setting":"morning studio","camera_move":"slow push-in","motion":"fabric settles, dust drifts in the light"}
+]

@@ -1,0 +1,78 @@
+[
+ {
+  "id": "poster-a2",
+  "format": "A2",
+  "layout": "type-led",
+  "mode": "light",
+  "lang": "ru",
+  "kicker": "Йога-студия · Мюнхен",
+  "headline": "Здесь тихо.",
+  "sub": "Открываемся 14 марта. Первое занятие — бесплатно.",
+  "meta": [
+   "[АДРЕС], München",
+   "tiho.example"
+  ],
+  "cta": "Записаться на пробное"
+ },
+ {
+  "id": "flyer-a5",
+  "format": "A5",
+  "layout": "big-number",
+  "mode": "dark",
+  "lang": "ru",
+  "kicker": "Йога-студия · Мюнхен",
+  "mark": "Тихо",
+  "number": "14",
+  "headline": "марта открываемся.",
+  "sub": "Первое занятие — бесплатно. Приходите без коврика и без спешки.",
+  "meta": [
+   "[АДРЕС], München",
+   "tiho.example"
+  ],
+  "cta": "Пробное бесплатно"
+ },
+ {
+  "id": "ig-post",
+  "format": "ig-post",
+  "layout": "type-led",
+  "mode": "light",
+  "lang": "ru",
+  "kicker": "Тихо · Мюнхен",
+  "headline": "Здесь тихо.",
+  "sub": "Открываемся 14 марта. Первое занятие — бесплатно.",
+  "meta": [
+   "@tiho.example"
+  ],
+  "cta": "Записаться"
+ },
+ {
+  "id": "ig-story",
+  "format": "ig-story",
+  "layout": "big-number",
+  "mode": "accent",
+  "lang": "ru",
+  "kicker": "Йога-студия · Мюнхен",
+  "mark": "Тихо",
+  "number": "14",
+  "headline": "марта открываемся.",
+  "sub": "Пробное занятие — бесплатно.",
+  "meta": [
+   "@tiho.example"
+  ],
+  "cta": "Ссылка в профиле"
+ },
+ {
+  "id": "card",
+  "format": "card-eu",
+  "layout": "card",
+  "mode": "light",
+  "lang": "ru",
+  "mark": "Тихо",
+  "headline": "[ИМЯ ФАМИЛИЯ] — преподаватель йоги",
+  "meta": [
+   "[+49 …]",
+   "hallo@tiho.example",
+   "[АДРЕС], München"
+  ]
+ }
+]

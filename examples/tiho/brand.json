@@ -1,0 +1,240 @@
+{
+  "name": "Тихо",
+  "version": "0.1.0",
+  "tagline": "Йога без шума",
+  "_generated": {
+    "by": "heypip/suggest_brand.py — a draft; edit positioning, voice and imagery by hand",
+    "from": "yoga studio in Munich, calm, quiet, for urban professionals; Russian-speaking community",
+    "product_match": "Yoga & Stretching Guide",
+    "style": "Organic Biophilic",
+    "font_pairing": "Wellness Calm",
+    "landing_pattern": "Storytelling-Driven + Social Proof",
+    "anti_patterns": "Inconsistent styling + Poor contrast ratios",
+    "notes": null
+  },
+  "positioning": {
+    "category": "Yoga & Stretching Guide",
+    "difference": "Маленькая русскоязычная студия в Мюнхене, где главное — тишина, а не нагрузка.",
+    "character": [
+      "Warm",
+      "Humanist",
+      "Natural"
+    ],
+    "is": [
+      "тихая",
+      "тёплая",
+      "неторопливая"
+    ],
+    "is_not": [
+      "фитнес-клуб",
+      "инста-эзотерика",
+      "крик и мотивация"
+    ]
+  },
+  "voice": {
+    "tone": [
+      "спокойный",
+      "короткий",
+      "на «вы»"
+    ],
+    "do": [
+      "короткие фразы",
+      "глаголы покоя"
+    ],
+    "dont": [
+      "восклицательные знаки",
+      "«прокачай»"
+    ],
+    "examples": []
+  },
+  "color": {
+    "palette": {
+      "primary": "#5E6B57",
+      "secondary": "#A9876B",
+      "accent": "#B4623F",
+      "background": "#F3EFE7",
+      "foreground": "#24261F",
+      "card": "#FBF8F2",
+      "muted": "#E8E2D6",
+      "muted-fg": "#5A5C52",
+      "border": "#DDD5C6",
+      "danger": "#DC2626",
+      "night": "#20231E",
+      "night-2": "#2C3029"
+    },
+    "light": {
+      "bg": "background",
+      "surface": "card",
+      "text": "foreground",
+      "muted": "#5A5C52",
+      "accent": "#9A4F2E",
+      "on-accent": "#FFFFFF",
+      "border": "border",
+      "focus": "#5E6B57",
+      "danger": "danger"
+    },
+    "dark": {
+      "bg": "night",
+      "surface": "night-2",
+      "text": "#F3EFE7",
+      "muted": "#A8AB9C",
+      "accent": "#D99A77",
+      "on-accent": "#20231E",
+      "border": "#3B4037",
+      "focus": "#D99A77"
+    },
+    "default_mode": "light",
+    "usage": "Earth calming sage/terracotta/cream + breathing gradient + warm accent. Accent only for the main action and active states."
+  },
+  "type": {
+    "families": {
+      "display": {
+        "name": "Lora",
+        "fallback": "Georgia, 'Times New Roman', serif",
+        "source": "google",
+        "weights": [
+          500,
+          600
+        ]
+      },
+      "text": {
+        "name": "Raleway",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', sans-serif",
+        "source": "google",
+        "weights": [
+          400,
+          500,
+          600
+        ]
+      }
+    },
+    "base": 17,
+    "ratio": 1.333,
+    "steps": {
+      "xs": -1.25,
+      "sm": -0.5,
+      "base": 0,
+      "lg": 1,
+      "xl": 2,
+      "2xl": 3,
+      "3xl": 4,
+      "4xl": 5,
+      "5xl": 6
+    },
+    "leading": {
+      "tight": 1.08,
+      "snug": 1.3,
+      "body": 1.6
+    },
+    "tracking": {
+      "display": "-0.02em",
+      "body": "0",
+      "label": "0.08em"
+    }
+  },
+  "space": {
+    "base": 4,
+    "scale": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      6,
+      8,
+      12,
+      16,
+      24,
+      32
+    ]
+  },
+  "radius": {
+    "none": 0,
+    "sm": 8,
+    "md": 16,
+    "lg": 32,
+    "pill": 999
+  },
+  "border": {
+    "width": 1
+  },
+  "elevation": {
+    "0": "none",
+    "1": "0 1px 2px rgba(0,0,0,.06)",
+    "2": "0 12px 32px -16px rgba(0,0,0,.22)"
+  },
+  "motion": {
+    "character": "neutral",
+    "duration": {
+      "fast": 120,
+      "base": 200,
+      "slow": 360
+    },
+    "easing": {
+      "standard": "cubic-bezier(.2,0,0,1)",
+      "enter": "cubic-bezier(0,0,0,1)",
+      "exit": "cubic-bezier(.3,0,1,1)"
+    },
+    "rules": [
+      "Rounded 16-24px + Natural shadows + Flowing SVG",
+      "Honour prefers-reduced-motion"
+    ]
+  },
+  "layout": {
+    "maxWidth": 1240,
+    "columns": 12,
+    "gutter": 24,
+    "margin": 24,
+    "breakpoints": {
+      "sm": 640,
+      "md": 768,
+      "lg": 1024,
+      "xl": 1280
+    }
+  },
+  "components": {
+    "button": {
+      "radius": "md",
+      "height": 48,
+      "weight": 600,
+      "variants": [
+        "primary",
+        "secondary",
+        "ghost"
+      ]
+    },
+    "card": {
+      "radius": "lg",
+      "elevation": "1",
+      "padding": 6
+    },
+    "input": {
+      "radius": "md",
+      "height": 48
+    }
+  },
+  "imagery": {
+    "light": "",
+    "grade": "",
+    "lens": "",
+    "framing": "",
+    "subjects": "",
+    "palette_words": [],
+    "avoid": [
+      "stock smiles",
+      "generic office stock",
+      "AI-gloss skin"
+    ]
+  },
+  "film": {
+    "pace": "",
+    "camera": "",
+    "cuts": "",
+    "sound": "",
+    "type_in_motion": ""
+  },
+  "logo": {
+    "wordmark": "Тихо",
+    "file": null
+  }
+}

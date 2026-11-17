@@ -1,0 +1,94 @@
+{
+  "name": "Zerno",
+  "version": "1.0.0",
+  "tagline": "Mittwochs rösten wir. Hier, im Raum. · По средам жарим. Прямо здесь, в зале.",
+  "positioning": {
+    "category": "Independent neighbourhood coffee roastery-café (Kiezrösterei), Berlin-Neukölln",
+    "difference": "Roasts every Wednesday in the guest room itself — 14 seats, neighbours see, smell and hear their coffee being made and take the beans home the same week.",
+    "character": ["neighbourly", "exact", "warm-smoky"],
+    "is": ["a working room with a log book", "exact numbers (batch, °C, date)", "bilingual the way neighbours talk", "kraft, ink, ember", "Wednesday as a ritual"],
+    "is_not": ["a latte-art Instagram set", "vague 'artisan passion' talk", "tourist-English menu", "marble, gold, pastel", "'experience', 'journey'"]
+  },
+  "voice": {
+    "tone": ["plain", "neighbourly", "precise"],
+    "do": ["numbers instead of adjectives (batch, °C, minutes, date)", "German 'du/ihr' Kiez register; Russian «вы», warm not stiff", "short declaratives", "same structure in DE and RU"],
+    "dont": ["artisan / passion / Erlebnis / experience / крафтовый / атмосферный", "English as a third language", "invented reviews, stats or awards", "exclamation marks"],
+    "examples": [
+      "Mittwochs rösten wir. Hier, im Raum.",
+      "По средам жарим. Прямо здесь, в зале.",
+      "14 Plätze. Ein Röster. Dein Kiez.",
+      "14 мест. Один ростер. Ваш район.",
+      "Charge 47 — geröstet am Mittwoch, getrunken bis Sonntag."
+    ]
+  },
+  "color": {
+    "palette": {
+      "kraft": "#EDE4D3",
+      "kraft-2": "#E3D7C1",
+      "ink": "#1F1712",
+      "roast": "#6B4E3D",
+      "rule": "#B8A68A",
+      "ember": "#A9361A",
+      "night": "#17110D",
+      "night-2": "#221A14",
+      "ember-night": "#E0673F"
+    },
+    "light": {
+      "bg": "kraft", "surface": "kraft-2", "text": "ink", "muted": "roast",
+      "accent": "ember", "on-accent": "#FFFFFF", "border": "rule", "focus": "ember"
+    },
+    "dark": {
+      "bg": "night", "surface": "night-2", "text": "kraft", "muted": "#B9A68E",
+      "accent": "ember-night", "on-accent": "#17110D", "border": "#4A3A2E", "focus": "ember-night"
+    },
+    "pairs": [["text", "bg"], ["muted", "bg"], ["text", "surface"], ["muted", "surface"], ["on-accent", "accent"], ["accent", "bg"]],
+    "default_mode": "light",
+    "usage": "70% kraft, 20% ink, 7% roast brown, 3% ember (ember = action or 'Wednesday/среда' only)"
+  },
+  "type": {
+    "families": {
+      "display": {"name": "Alegreya", "fallback": "Georgia, 'Times New Roman', serif", "source": "google", "weights": [700, 800]},
+      "text": {"name": "Golos Text", "fallback": "system-ui, -apple-system, 'Segoe UI', sans-serif", "source": "google", "weights": [400, 500, 600]},
+      "mono": {"name": "IBM Plex Mono", "fallback": "ui-monospace, 'SFMono-Regular', monospace", "source": "google", "weights": [400, 500]}
+    },
+    "base": 18,
+    "ratio": 1.333,
+    "steps": {"xs": -1.25, "sm": -0.5, "base": 0, "lg": 1, "xl": 2, "2xl": 3, "3xl": 4, "4xl": 5, "5xl": 6},
+    "leading": {"tight": 1.05, "snug": 1.25, "body": 1.6},
+    "tracking": {"display": "-0.015em", "body": "0", "label": "0.08em"}
+  },
+  "space": {"base": 8, "scale": [0, 1, 2, 3, 4, 6, 8, 12, 16]},
+  "radius": {"none": 0, "sm": 2, "md": 2, "lg": 4, "pill": 999},
+  "border": {"width": 1},
+  "elevation": {"0": "none", "1": "0 0 0 1px rgba(31,23,18,.18)"},
+  "motion": {
+    "character": "calm",
+    "duration": {"fast": 160, "base": 280, "slow": 520},
+    "easing": {"standard": "cubic-bezier(.2,0,0,1)", "enter": "cubic-bezier(0,0,0,1)", "exit": "cubic-bezier(.3,0,1,1)"},
+    "rules": ["Opacity and translate under 12px only", "The roast curve draws once on scroll; nothing loops", "Reduced motion: everything static"]
+  },
+  "layout": {"maxWidth": 1200, "columns": 12, "gutter": 24, "margin": 24, "breakpoints": {"sm": 640, "md": 768, "lg": 1024, "xl": 1280}},
+  "components": {
+    "button": {"radius": "sm", "height": 48, "weight": 600, "variants": ["primary", "secondary", "ghost"]},
+    "card": {"radius": "sm", "elevation": "0", "padding": 3},
+    "input": {"radius": "sm", "height": 48},
+    "stamp": {"radius": "sm", "border": 2, "note": "rectangular ink border, mono uppercase label — 'MITTWOCH · СРЕДА'"}
+  },
+  "imagery": {
+    "light": "warm tungsten inside mixed with grey Berlin daylight from the street window",
+    "grade": "warm browns, matte, lifted blacks, visible film grain, no teal-orange",
+    "lens": "35mm documentary, 50mm for details, f/2–f/2.8",
+    "framing": "close on hands, drum, cooling tray, steam; neighbours candid, not posed",
+    "subjects": "the roaster in the guest room, beans cooling, kraft bags with handwritten batch numbers, regulars at the 14 seats",
+    "palette_words": ["kraft", "roast brown", "ink", "ember"],
+    "avoid": ["marble flat-lays", "latte-art hero shots", "stock baristas", "white seamless", "neon"]
+  },
+  "film": {
+    "pace": "slow, 3–5s shots, Wednesday morning in real time",
+    "camera": "handheld but calm, or locked-off on the drum; no whip pans",
+    "cuts": "straight cuts on sound (first crack, tray opening)",
+    "sound": "drum rumble, first crack, cups, street through the door; no music bed or sparse",
+    "type_in_motion": "Alegreya headlines + Plex Mono data, fades only, 520ms"
+  },
+  "logo": {"wordmark": "Zerno · Зерно", "file": null}
+}

@@ -1,0 +1,335 @@
+{
+  "name": "Lumen & Loom",
+  "version": "1.0.0",
+  "tagline": "Лён, сшитый руками в Лиссабоне. Сорок вещей в неделю.",
+  "positioning": {
+    "category": "Независимая slow-fashion марка льняной одежды, премиум",
+    "difference": "Шьётся вручную в одном лиссабонском ателье партиями около 40 вещей в неделю; каждая вещь пронумерована в партии и подписана мастером",
+    "character": [
+      "точный",
+      "солнечный",
+      "упрямый"
+    ],
+    "is": [
+      "рабочий журнал ателье с честными числами",
+      "редакционный ритм и воздух",
+      "резкие края, как линия кроя",
+      "жёсткий лиссабонский свет и тень ставен"
+    ],
+    "is_not": [
+      "фальшивый дефицит и таймеры",
+      "сетка интернет-магазина",
+      "мягкие скругления и пилюли",
+      "эко-клише и гринвошинг"
+    ]
+  },
+  "voice": {
+    "tone": [
+      "спокойный",
+      "конкретный",
+      "упрямый"
+    ],
+    "do": [
+      "Короткие предложения",
+      "Числа, даты и имена вместо эпитетов",
+      "Говорить о процессе и материале",
+      "Изредка португальское слово с переводом по контексту"
+    ],
+    "dont": [
+      "Восклицательные знаки",
+      "«Осознанный», «эко-френдли», «устойчивый» без доказательства",
+      "Таймеры и «осталось 2 шт.»",
+      "Англицизмы вроде «дроп», «лук»"
+    ],
+    "examples": [
+      "Сорок вещей в неделю. Не больше.",
+      "Раскроено во вторник. Подписано Аной.",
+      "Лён мнётся. Так и задумано."
+    ]
+  },
+  "color": {
+    "palette": {
+      "cal": "#F3EFE7",
+      "papel": "#FAF8F3",
+      "linho": "#DCD2C0",
+      "pedra": "#5F584E",
+      "carvao": "#22201C",
+      "anil": "#2F3E66",
+      "anil-deep": "#243152",
+      "noite": "#16171A",
+      "noite-2": "#202126"
+    },
+    "light": {
+      "bg": "cal",
+      "surface": "papel",
+      "text": "carvao",
+      "muted": "pedra",
+      "accent": "anil",
+      "accent-hover": "anil-deep",
+      "on-accent": "cal",
+      "border": "linho",
+      "rule": "#6F675C",
+      "inverse-bg": "carvao",
+      "inverse-text": "cal",
+      "inverse-muted": "#B4AC9E",
+      "focus": "anil"
+    },
+    "dark": {
+      "bg": "noite",
+      "surface": "noite-2",
+      "text": "#EDE8DE",
+      "muted": "#ABA497",
+      "accent": "#A9B8E0",
+      "accent-hover": "#C3CEEB",
+      "on-accent": "noite",
+      "border": "#34353B",
+      "rule": "#8A857C",
+      "inverse-bg": "#EDE8DE",
+      "inverse-text": "noite",
+      "inverse-muted": "#5F584E",
+      "focus": "#A9B8E0"
+    },
+    "pairs": [
+      [
+        "text",
+        "bg"
+      ],
+      [
+        "muted",
+        "bg"
+      ],
+      [
+        "text",
+        "surface"
+      ],
+      [
+        "muted",
+        "surface"
+      ],
+      [
+        "on-accent",
+        "accent"
+      ],
+      [
+        "on-accent",
+        "accent-hover"
+      ],
+      [
+        "accent",
+        "bg"
+      ],
+      [
+        "inverse-text",
+        "inverse-bg"
+      ],
+      [
+        "inverse-muted",
+        "inverse-bg"
+      ],
+      [
+        "focus",
+        "bg"
+      ],
+      [
+        "rule",
+        "bg"
+      ]
+    ],
+    "usage": "75% cal, 18% carvão, 5% linho, 2% anil. Anil — только действие, фокус и номер текущей партии."
+  },
+  "type": {
+    "families": {
+      "display": {
+        "name": "Cormorant Garamond",
+        "fallback": "'Times New Roman', Georgia, serif",
+        "source": "google",
+        "weights": [
+          500,
+          600
+        ],
+        "scripts": [
+          "latin",
+          "cyrillic"
+        ],
+        "note": "только ≥ 24px"
+      },
+      "text": {
+        "name": "Manrope",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', sans-serif",
+        "source": "google",
+        "weights": [
+          400,
+          500,
+          600
+        ],
+        "scripts": [
+          "latin",
+          "cyrillic"
+        ]
+      },
+      "mono": {
+        "name": "IBM Plex Mono",
+        "fallback": "ui-monospace, Menlo, monospace",
+        "source": "google",
+        "weights": [
+          400
+        ],
+        "scripts": [
+          "latin",
+          "cyrillic"
+        ],
+        "note": "только для данных: номера, даты, имена мастеров"
+      }
+    },
+    "base": 17,
+    "ratio": 1.333,
+    "steps": {
+      "xs": -0.75,
+      "sm": -0.4,
+      "base": 0,
+      "lg": 0.5,
+      "xl": 1,
+      "2xl": 2,
+      "3xl": 3,
+      "4xl": 4,
+      "5xl": 5,
+      "6xl": 6
+    },
+    "leading": {
+      "tight": 1.0,
+      "snug": 1.2,
+      "body": 1.65
+    },
+    "tracking": {
+      "display": "-0.015em",
+      "body": "0",
+      "label": "0.12em"
+    }
+  },
+  "space": {
+    "base": 4,
+    "scale": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      6,
+      8,
+      10,
+      12,
+      16,
+      24,
+      32,
+      40
+    ]
+  },
+  "radius": {
+    "none": 0,
+    "sm": 0,
+    "md": 0,
+    "lg": 0,
+    "pill": 999
+  },
+  "border": {
+    "width": 1
+  },
+  "elevation": {
+    "0": "none",
+    "1": "0 1px 0 rgba(34,32,28,.08)"
+  },
+  "motion": {
+    "character": "calm",
+    "duration": {
+      "fast": 160,
+      "base": 320,
+      "slow": 600
+    },
+    "easing": {
+      "standard": "cubic-bezier(.25,0,0,1)",
+      "enter": "cubic-bezier(0,0,.2,1)",
+      "exit": "cubic-bezier(.4,0,1,1)"
+    },
+    "rules": [
+      "Только opacity и сдвиг ≤ 12px",
+      "Герой появляется один раз, ≤ 600ms, не более 3 элементов",
+      "Ничего не зацикливается — никаких бегущих строк",
+      "Ссылки: подчёркивание прорисовывается слева направо"
+    ]
+  },
+  "layout": {
+    "maxWidth": 1280,
+    "columns": 12,
+    "gutter": 24,
+    "margin": 24,
+    "breakpoints": {
+      "sm": 640,
+      "md": 768,
+      "lg": 1024,
+      "xl": 1280
+    }
+  },
+  "components": {
+    "button": {
+      "radius": "none",
+      "height": 52,
+      "weight": 600,
+      "variants": [
+        "primary",
+        "secondary",
+        "ghost"
+      ],
+      "rule": "primary — только «Записаться в лист», один на экран"
+    },
+    "card": {
+      "radius": "none",
+      "elevation": "0",
+      "padding": 6,
+      "rule": "без тени; разделение линией linho"
+    },
+    "input": {
+      "radius": "none",
+      "height": 52,
+      "rule": "нижняя линия 1px rule, фокус — 2px anil"
+    },
+    "ledger-row": {
+      "rule": "строка тетради: mono номер · имя вещи · мастер · дата; разделитель 1px border"
+    }
+  },
+  "imagery": {
+    "light": "hard low late-afternoon Lisbon sun raking through wooden window shutters, crisp stripes of shadow on limewashed walls",
+    "grade": "matte sun-bleached film grade, warm whites, lifted blacks, fine 35mm grain, muted saturation, indigo kept deep",
+    "lens": "35mm and 50mm, f/2.8 to f/4, natural perspective, eye-level or slightly above",
+    "framing": "asymmetric, subject in one third, large clean wall or floor area for type, crops through the body rather than full-length catalogue poses",
+    "subjects": "seamstresses' hands at work, raw and washed linen, finished garments worn by real people aged 30 to 60, Lisbon limestone, worn wooden tables, calçada pavement",
+    "palette_words": [
+      "limewash white",
+      "raw flax",
+      "charcoal",
+      "deep indigo"
+    ],
+    "avoid": [
+      "seamless studio backdrop",
+      "flat diffused light",
+      "heavy retouching",
+      "steamed glossy fabric",
+      "posed smiles",
+      "neon",
+      "teal-orange grade",
+      "azulejo tile cliché",
+      "lens flare"
+    ]
+  },
+  "film": {
+    "pace": "slow, 3 to 5 second shots",
+    "camera": "locked-off tripod or slow lateral slide, no handheld shake, no drones",
+    "cuts": "straight cuts on the moment a needle or scissors moves; match cut from shutter shadow to striped linen",
+    "sound": "room tone, scissors on wood, treadle sewing machine, distant tram bell",
+    "type_in_motion": "Cormorant Garamond, opacity fades only, 600ms"
+  },
+  "logo": {
+    "wordmark": "Lumen & Loom",
+    "file": "site/assets/wordmark.svg",
+    "rule": "Cormorant Garamond 500, амперсанд в цвете anil только на светлом фоне; без иконки"
+  }
+}

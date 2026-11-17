@@ -1,0 +1,14 @@
+[
+  {"id":"hero","kind":"photo","use":"website hero, right half of the first screen","aspect":"4:5",
+   "subject":"the weathered hands of a seamstress in her fifties pinning the collar of an unfinished raw-linen shirt laid flat on a scarred wooden cutting table, tailor's chalk, steel shears and a spool of natural thread beside it",
+   "setting":"small atelier room in Graça, Lisbon, limewashed wall behind, tall window with half-closed wooden shutters",
+   "framing":"top-down three-quarter angle, hands and shirt in the lower right two thirds, clean shadow-striped wall in the upper left third left empty for type"},
+  {"id":"street","kind":"photo","use":"full-bleed photo pause between sections","aspect":"16:9",
+   "subject":"a man in his late thirties wearing a loose undyed linen shirt and charcoal linen trousers walking uphill away from camera, sleeves rolled, shirt creased and moving in the breeze",
+   "setting":"narrow cobbled calçada street in Alfama, Lisbon, pale limestone walls, a deep indigo painted wooden door, no tourists, no trams",
+   "framing":"wide, figure small in the right third, face not visible, long diagonal shadow across the street, left half empty wall and sky for a caption"},
+  {"id":"detail","kind":"photo","use":"atelier section, close-up detail","aspect":"4:5",
+   "subject":"macro close-up of a hand-finished French seam on the inside of an indigo-dyed linen dress, a small undyed cotton label sewn in with visible hand stitches, the label blank except for a short handwritten ink number",
+   "setting":"fabric resting on the worn wooden table, a single stripe of hard sunlight crossing the seam",
+   "framing":"macro, very shallow depth of field, seam on a diagonal from lower left to upper right, top third falls into soft shadow"}
+]

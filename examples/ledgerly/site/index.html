@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ledgerly — бухгалтерия для фрилансеров. Начисто.</title>
+  <link rel="stylesheet" href="fonts/fonts.css">
+  <meta name="description" content="Счета, поступления и налог в одном месте. Ledgerly сразу показывает, сколько из поступившего — ваше, и сам откладывает налог. [N] дней бесплатно.">
+  <meta property="og:title" content="Ledgerly — ваши деньги. Начисто.">
+  <meta property="og:description" content="Бухгалтерия для фрилансеров и самозанятых: счета, оплаты, налог — без черновиков.">
+  <meta property="og:image" content="og-image.png">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../tokens/tokens.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Перейти к содержанию</a>
+
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="wordmark" href="#top" aria-label="Ledgerly — на главную">Ledger<span class="mark">ly</span></a>
+      <nav class="nav" aria-label="Основная навигация">
+        <a href="#how">Как работает</a>
+        <a href="#price">Цена</a>
+        <a href="#faq">Вопросы</a>
+      </nav>
+      <div class="header-actions">
+        <button class="btn btn-ghost btn-icon" type="button" id="theme-toggle" aria-label="Переключить тёмную тему" aria-pressed="false">
+          <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9z" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+        </button>
+        <a class="btn btn-ghost hide-sm" href="[ССЫЛКА НА ВХОД]">Войти</a>
+        <a class="btn btn-primary" href="#start">Попробовать <span class="hide-sm">бесплатно</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- 2. Герой -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="label">Для фрилансеров и самозанятых</p>
+          <h1 id="hero-title" class="display">Бухгалтерия для&nbsp;фрилансеров. <span class="nowrap">Начисто.</span></h1>
+          <p class="lead">Выставляйте счета, получайте оплату и сразу видите, сколько из этого — ваше. Налог Ledgerly отложит и посчитает сам.</p>
+          <div class="actions">
+            <a class="btn btn-primary btn-lg" href="#start">Попробовать бесплатно</a>
+            <a class="btn btn-secondary btn-lg" href="#how">Как это работает</a>
+          </div>
+          <p class="fineprint">[N] дней бесплатно. Карта не нужна.</p>
+        </div>
+
+        <figure class="sheet hero-sheet" aria-labelledby="sheet-caption">
+          <div class="sheet-head">
+            <span class="label">Ноябрь</span>
+            <span class="label muted">пример</span>
+          </div>
+          <table class="ledger">
+            <caption class="sr-only">Пример поступлений за месяц</caption>
+            <thead>
+              <tr><th scope="col">Клиент</th><th scope="col">Статус</th><th scope="col" class="num">Сумма</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Студия «Север»</td><td><span class="status status-paid">оплачен</span></td><td class="num amount">120&nbsp;000&nbsp;₽</td></tr>
+              <tr><td>Анна К., сайт</td><td><span class="status status-paid">оплачен</span></td><td class="num amount">45&nbsp;000&nbsp;₽</td></tr>
+              <tr><td>Bureau&nbsp;Nord</td><td><span class="status status-paid">оплачен</span></td><td class="num amount">31&nbsp;000&nbsp;₽</td></tr>
+              <tr><td>Подкаст «Сдача»</td><td><span class="status status-wait">ждём</span></td><td class="num amount muted">18&nbsp;000&nbsp;₽</td></tr>
+            </tbody>
+          </table>
+          <div class="sheet-rule" aria-hidden="true"></div>
+          <dl class="totals">
+            <div><dt>Поступило</dt><dd class="amount">196&nbsp;000&nbsp;₽</dd></div>
+            <div><dt>Налог отложен</dt><dd class="amount">−11&nbsp;760&nbsp;₽</dd></div>
+            <div class="total-main"><dt>Ваше</dt><dd class="amount"><mark class="hl" data-count="184240">184&nbsp;240&nbsp;₽</mark></dd></div>
+          </dl>
+          <figcaption id="sheet-caption" class="fineprint">Так выглядит месяц в Ledgerly. Цифры — пример; ставка зависит от вашего режима: [РЕЖИМЫ НАЛОГООБЛОЖЕНИЯ].</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- 3. Черновик -->
+    <section class="section draft" aria-labelledby="draft-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="label">Как обычно</p>
+          <h2 id="draft-title" class="h2">Узнаёте свой черновик?</h2>
+        </div>
+        <ul class="notes" role="list">
+          <li class="note"><span class="note-src">Заметки</span><s>«Аня — 45к, вроде оплатила?»</s></li>
+          <li class="note"><span class="note-src">Таблица</span><s>«Налоги 2026 (финал) (2).xlsx»</s></li>
+          <li class="note"><span class="note-src">Банк</span><s>«Перевод от ИП… это за какой проект?»</s></li>
+          <li class="note"><span class="note-src">Голова</span><s>«Налог — потом. Когда-нибудь потом.»</s></li>
+        </ul>
+        <p class="statement">Ledgerly переписывает это <span class="nowrap">начисто.</span></p>
+      </div>
+    </section>
+
+    <!-- 4. Как работает -->
+    <section class="section" id="how" aria-labelledby="how-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="label">Как работает</p>
+          <h2 id="how-title" class="h2">Три строки вместо бухгалтера</h2>
+        </div>
+        <ol class="steps" role="list">
+          <li class="step">
+            <span class="step-n">01</span>
+            <div class="step-body">
+              <h3 class="h3">Выставьте счёт</h3>
+              <p>Клиент, сумма, срок — счёт готов за минуту и уходит ссылкой или PDF. Реквизиты подставятся сами.</p>
+            </div>
+            <div class="step-ui" aria-hidden="true">
+              <span class="mono">Счёт № 0047</span><span class="amount">45&nbsp;000&nbsp;₽</span><span class="status status-wait">отправлен</span>
+            </div>
+          </li>
+          <li class="step">
+            <span class="step-n">02</span>
+            <div class="step-body">
+              <h3 class="h3">Получите оплату</h3>
+              <p>Ledgerly сам сопоставит поступление со счётом и отметит его оплаченным. Никаких «это за что?».</p>
+            </div>
+            <div class="step-ui" aria-hidden="true">
+              <span class="mono">14:02 → 16:40</span><span class="amount">45&nbsp;000&nbsp;₽</span><span class="status status-paid">оплачен</span>
+            </div>
+          </li>
+          <li class="step">
+            <span class="step-n">03</span>
+            <div class="step-body">
+              <h3 class="h3">Налог отложен</h3>
+              <p>Сумма налога считается в момент оплаты и откладывается в сторону. О сроке напомним заранее — один раз и спокойно.</p>
+            </div>
+            <div class="step-ui" aria-hidden="true">
+              <span class="mono">Налог</span><span class="amount">−2&nbsp;700&nbsp;₽</span><span class="status status-paid">отложен</span>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 5. Фото-разворот -->
+    <section class="spread" aria-labelledby="spread-title">
+      <figure class="photo photo-wide">
+        <!-- Заменить на кадр P02 из photo/prompts.md (21:9, 2400×1029, WebP) -->
+        <div class="photo-ph" role="img" aria-label="Вечер, рабочий стол фрилансера: ноутбук закрыт, рядом блокнот с разлинованной страницей и жёлтым маркером, тёплая лампа.">
+          <span class="ph-tag">P02 · 21:9 · см. photo/prompts.md</span>
+        </div>
+        <figcaption class="container spread-cap">
+          <h2 id="spread-title" class="display-2">Налог отложен. <span class="nowrap">Можно спать.</span></h2>
+          <p class="muted">Ноябрь, 23:10. Закрыли последний проект — Ledgerly уже всё посчитал.</p>
+        </figcaption>
+      </figure>
+    </section>
+
+    <!-- 6. Что внутри -->
+    <section class="section" aria-labelledby="inside-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="label">Что внутри</p>
+          <h2 id="inside-title" class="h2">Всё, что раньше жило в&nbsp;пяти местах</h2>
+        </div>
+        <table class="ledger ledger-wide">
+          <caption class="sr-only">Возможности Ledgerly</caption>
+          <thead><tr><th scope="col">Функция</th><th scope="col">Что это значит</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Счета и акты</th><td>Шаблон один раз — дальше счёт за минуту. Клиент оплачивает по ссылке.</td></tr>
+            <tr><th scope="row">Поступления</th><td>Подключите банк — оплаты сами найдут свои счета.</td></tr>
+            <tr><th scope="row">Расходы</th><td>Сфотографируйте чек — сумма и дата распознаются.</td></tr>
+            <tr><th scope="row">Налоговый календарь</th><td>Сколько и до какого числа. Напоминание приходит заранее.</td></tr>
+            <tr><th scope="row">Отчёты</th><td>Доход за год одним PDF — для банка, визы или аренды.</td></tr>
+            <tr><th scope="row">Экспорт</th><td>Если у вас есть бухгалтер, он получит всё в понятном ему виде.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 7. Отзывы — плейсхолдеры, не выдумываем -->
+    <section class="section section-tight" aria-labelledby="proof-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="label">Первые пользователи</p>
+          <h2 id="proof-title" class="h2">Что говорят после первого месяца</h2>
+        </div>
+        <div class="proof">
+          <blockquote class="quote placeholder">
+            <p>[ОТЗЫВ 1 — реальная цитата пользователя бета-версии, до 25 слов]</p>
+            <footer>[Имя], [профессия]</footer>
+          </blockquote>
+          <blockquote class="quote placeholder">
+            <p>[ОТЗЫВ 2 — реальная цитата пользователя бета-версии, до 25 слов]</p>
+            <footer>[Имя], [профессия]</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Тариф -->
+    <section class="section" id="price" aria-labelledby="price-title">
+      <div class="container price-grid">
+        <div class="section-head">
+          <p class="label">Цена</p>
+          <h2 id="price-title" class="h2">Один тариф. Без мелкого шрифта.</h2>
+          <p class="muted">Первые [N] дней — бесплатно и со всеми функциями. Потом решите сами.</p>
+        </div>
+        <div class="sheet price-sheet">
+          <p class="label">Ledgerly</p>
+          <p class="price"><span class="amount">[ЦЕНА]&nbsp;₽</span> <span class="muted">в месяц</span></p>
+          <p class="muted">или [ЦЕНА/ГОД]&nbsp;₽ за год</p>
+          <ul class="checks" role="list">
+            <li>Безлимит счетов и клиентов</li>
+            <li>Автоматический учёт поступлений</li>
+            <li>Расчёт и напоминания о налоге</li>
+            <li>Отчёты и экспорт для бухгалтера</li>
+            <li>Отмена в любой момент, в два клика</li>
+          </ul>
+          <a class="btn btn-primary btn-lg btn-block" href="#start">Попробовать бесплатно</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. Вопросы -->
+    <section class="section" id="faq" aria-labelledby="faq-title">
+      <div class="container faq-grid">
+        <div class="section-head">
+          <p class="label">Вопросы</p>
+          <h2 id="faq-title" class="h2">Что спрашивают перед стартом</h2>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>Подходит ли мне Ledgerly?</summary>
+            <p>Если вы работаете на себя и получаете деньги от клиентов — да. Сейчас поддерживаются: [РЕЖИМЫ НАЛОГООБЛОЖЕНИЯ].</p>
+          </details>
+          <details>
+            <summary>Где хранятся мои данные?</summary>
+            <p>[ОПИСАНИЕ ХРАНЕНИЯ И ЗАЩИТЫ ДАННЫХ — заполнить юридически точно]. Доступ к банку — только на чтение: Ledgerly видит поступления, но не может переводить деньги.</p>
+          </details>
+          <details>
+            <summary>Можно перенести всё из моей таблицы?</summary>
+            <p>Да. Загрузите файл — Ledgerly предложит, какие колонки чем считать. Обычно это занимает минут десять.</p>
+          </details>
+          <details>
+            <summary>А если я ошибусь?</summary>
+            <p>Любую запись можно исправить, история изменений сохраняется. Перед отправкой отчёта Ledgerly покажет, что проверить.</p>
+          </details>
+          <details>
+            <summary>Мне всё ещё нужен бухгалтер?</summary>
+            <p>Для повседневного учёта — нет. Для сложных случаев — может быть, и тогда экспорт сэкономит ему (и вам) пару часов.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. Финал -->
+    <section class="section final" id="start" aria-labelledby="start-title">
+      <div class="container">
+        <div class="sheet final-sheet">
+          <h2 id="start-title" class="display-2">Перепишите финансы начисто</h2>
+          <p class="muted">Оставьте e-mail — пришлём ссылку для входа. [N] дней бесплатно, карта не нужна.</p>
+          <form class="signup" id="signup" novalidate>
+            <div class="field">
+              <label for="email">E-mail</label>
+              <input id="email" name="email" type="email" inputmode="email" autocomplete="email" required aria-describedby="email-help email-error" placeholder="you@studio.ru">
+              <p class="help" id="email-help">Только для входа и важных писем. Без рассылок.</p>
+              <p class="error" id="email-error" hidden>
+                <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M12 7v6M12 16.5v.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                <span>Похоже, в адресе опечатка. Проверьте, пожалуйста.</span>
+              </p>
+            </div>
+            <button class="btn btn-primary btn-lg" type="submit">Попробовать бесплатно</button>
+          </form>
+          <p class="success" id="signup-success" role="status" hidden></p>
+          <p class="fineprint">Нажимая кнопку, вы соглашаетесь с <a href="[ССЫЛКА НА ОФЕРТУ]">офертой</a> и <a href="[ССЫЛКА НА ПОЛИТИКУ]">политикой конфиденциальности</a>.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <a class="wordmark" href="#top">Ledger<span class="mark">ly</span></a>
+      <nav aria-label="Документы">
+        <a href="[ССЫЛКА НА ПОЛИТИКУ]">Политика конфиденциальности</a>
+        <a href="[ССЫЛКА НА ОФЕРТУ]">Оферта</a>
+        <a href="mailto:[EMAIL ПОДДЕРЖКИ]">Поддержка</a>
+      </nav>
+      <p class="fineprint">© 2026 [ЮРЛИЦО], ИНН [ИНН]</p>
+    </div>
+  </footer>
+
+  <script src="main.js" defer></script>
+</body>
+</html>

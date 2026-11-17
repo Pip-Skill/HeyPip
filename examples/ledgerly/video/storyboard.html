@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Раскадровка — Ledgerly Reels «Черновик → Чистовик» (15 с, 9:16)</title>
+<link rel="stylesheet" href="../tokens/tokens.css">
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  body { margin: 0; background: var(--color-bg); color: var(--color-text); font-family: var(--font-text); font-size: var(--text-sm); line-height: var(--leading-body); }
+  .wrap { max-width: var(--layout-max); margin: 0 auto; padding: var(--space-12) var(--space-6); }
+  h1 { font-family: var(--font-display); font-weight: 600; font-size: var(--text-3xl); line-height: var(--leading-tight); letter-spacing: var(--tracking-display); margin: 0; }
+  .meta { color: var(--color-muted); margin: var(--space-3) 0 0; max-width: 75ch; }
+  .label { font-size: var(--text-xs); text-transform: uppercase; letter-spacing: var(--tracking-label); font-weight: 600; color: var(--color-muted); }
+  .mono { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+
+  /* Тайм-лайн */
+  .timeline { display: flex; margin: var(--space-8) 0 var(--space-12); border: var(--border-width) solid var(--color-text); height: var(--space-10); }
+  .timeline div { border-right: var(--border-width) solid var(--color-text); display: flex; align-items: center; padding: 0 var(--space-2); font-family: var(--font-mono); font-size: var(--text-xs); white-space: nowrap; overflow: hidden; }
+  .timeline div:last-child { border-right: 0; }
+  .timeline .gen { background: var(--color-surface); }
+  .timeline .mg { background: var(--color-text); color: var(--color-bg); }
+  .legend { display: flex; gap: var(--space-6); margin-top: calc(-1 * var(--space-10)); margin-bottom: var(--space-10); color: var(--color-muted); font-size: var(--text-xs); }
+  .sw { display: inline-block; width: var(--space-3); height: var(--space-3); border: var(--border-width) solid var(--color-text); vertical-align: middle; margin-right: var(--space-1); }
+  .sw.mg { background: var(--color-text); }
+
+  .board { display: grid; gap: var(--space-8) var(--space-6); grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+  .shot { border-top: 2px solid var(--color-text); padding-top: var(--space-3); }
+  .shot-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: var(--space-3); }
+  .shot-id { font-family: var(--font-mono); font-weight: 500; font-size: var(--text-lg); }
+
+  /* Кадр 9:16 */
+  .frame { position: relative; aspect-ratio: 9 / 16; background: var(--palette-paper); border: var(--border-width) solid var(--color-border-strong); overflow: hidden; color: var(--palette-ink); }
+  .frame.night { background: var(--palette-night); color: var(--palette-paper); }
+  .safe-top, .safe-bottom, .safe-right { position: absolute; pointer-events: none; background: repeating-linear-gradient(135deg, transparent 0 6px, color-mix(in srgb, var(--palette-brick) 22%, transparent) 6px 7px); }
+  .safe-top { left: 0; right: 0; top: 0; height: 14%; }
+  .safe-bottom { left: 0; right: 0; bottom: 0; height: 20%; }
+  .safe-right { top: 14%; bottom: 20%; right: 0; width: 15%; }
+  .cap { position: absolute; left: 7%; right: 18%; font-family: var(--font-display); font-weight: 600; line-height: var(--leading-tight); font-size: var(--text-lg); letter-spacing: var(--tracking-display); }
+  .cap::after { content: ""; display: block; width: 40%; height: var(--border-width); background: currentColor; margin-top: var(--space-2); }
+
+  /* Эскизы из CSS-фигур */
+  .paper { position: absolute; background: var(--palette-sheet); border: var(--border-width) solid var(--palette-rule); }
+  .crumple { position: absolute; background: var(--palette-sheet); border: var(--border-width) solid var(--palette-rule); border-radius: 40% 55% 45% 60%; }
+  .sticky { position: absolute; width: 16%; aspect-ratio: 1; background: color-mix(in srgb, var(--palette-marker) 55%, var(--palette-paper)); }
+  .hand { position: absolute; background: color-mix(in srgb, var(--palette-graphite) 35%, var(--palette-paper)); border-radius: var(--radius-pill); }
+  .ruled { background-color: var(--palette-sheet); background-image: repeating-linear-gradient(to bottom, transparent 0 13px, var(--palette-rule) 13px 14px); }
+  .hl { position: absolute; height: 3%; background: var(--palette-marker); }
+  .phone { position: absolute; background: var(--palette-ink); border-radius: var(--radius-lg); padding: 3%; }
+  .phone i { display: block; width: 100%; height: 100%; background: var(--palette-sheet); border-radius: var(--radius-sm); }
+  .push { position: absolute; background: var(--palette-sheet); border: var(--border-width) solid var(--palette-rule); border-radius: var(--radius-lg); padding: 3% 4%; font-size: var(--text-xs); line-height: var(--leading-snug); }
+  .push b { font-family: var(--font-display); }
+  .push .dot { display: inline-block; width: 6px; height: 6px; border-radius: var(--radius-pill); background: var(--palette-settled); margin-right: 4px; }
+  .sheet { position: absolute; left: 7%; right: 7%; top: 30%; background: var(--palette-sheet); border: var(--border-width) solid var(--palette-rule); padding: 6%; font-size: var(--text-xs); box-shadow: var(--shadow-2); }
+  .sheet .row { display: flex; justify-content: space-between; padding: 4px 0; border-bottom: var(--border-width) solid var(--palette-rule); }
+  .sheet .rule { height: var(--border-width); background: var(--palette-ink); margin: 6px 0; }
+  .sheet .total { display: flex; justify-content: space-between; align-items: baseline; font-weight: 600; }
+  .sheet mark { background: var(--palette-marker); color: var(--palette-ink); font-family: var(--font-mono); font-size: var(--text-base); padding: 0 3px; }
+  .laptop { position: absolute; background: color-mix(in srgb, var(--palette-graphite) 70%, var(--palette-night)); }
+  .lamp { position: absolute; border-radius: 50%; background: radial-gradient(circle, color-mix(in srgb, var(--palette-marker) 55%, transparent), transparent 70%); }
+  .word { position: absolute; left: 7%; top: 38%; font-family: var(--font-display); font-weight: 600; font-size: var(--text-3xl); letter-spacing: var(--tracking-display); line-height: 1; }
+  .word span { background: linear-gradient(var(--palette-marker), var(--palette-marker)) 0 92% / 100% 0.22em no-repeat; }
+  .sub { position: absolute; left: 7%; right: 18%; top: 49%; font-size: var(--text-sm); }
+  .cta { position: absolute; left: 7%; top: 56%; background: var(--palette-settled); color: var(--palette-sheet); font-weight: 600; font-size: var(--text-sm); padding: 3% 5%; border-radius: var(--radius-md); }
+  .cta-sub { position: absolute; left: 7%; top: 65%; font-size: var(--text-xs); color: var(--palette-graphite); }
+  .arrow { position: absolute; font-family: var(--font-mono); font-size: var(--text-xl); color: var(--palette-graphite); }
+
+  dl { margin: var(--space-3) 0 0; display: grid; grid-template-columns: auto 1fr; gap: var(--space-1) var(--space-3); }
+  dt { color: var(--color-muted); font-size: var(--text-xs); text-transform: uppercase; letter-spacing: var(--tracking-label); padding-top: 2px; }
+  dd { margin: 0; }
+  .notes { margin-top: var(--space-16); display: grid; gap: var(--space-6); grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); border-top: var(--border-width) solid var(--color-border); padding-top: var(--space-8); }
+  .notes h2 { font-family: var(--font-display); font-size: var(--text-xl); margin: 0 0 var(--space-2); }
+  .notes p, .notes li { color: var(--color-muted); }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <p class="label">Ledgerly · кампания «Чистовик» · Reels</p>
+  <h1>Раскадровка: «Черновик → Чистовик»</h1>
+  <p class="meta">9:16 · 1080×1920 · 15,0 с · 25 fps · 120 BPM (1 такт = 2 с) · понятно без звука · титры шрифтами бренда в монтаже. Штриховка в кадрах — безопасные зоны Reels (верх 14%, низ 20%, справа 15%). ID шотов совпадают с <span class="mono">script.md</span> и <span class="mono">prompts.md</span>.</p>
+
+  <div class="timeline" aria-label="Тайм-лайн 15 секунд">
+    <div class="gen" style="flex:1.5">S01 1.5</div>
+    <div class="gen" style="flex:3">S02 3.0</div>
+    <div class="gen" style="flex:2.5">S03 2.5</div>
+    <div class="mg" style="flex:3">S04 3.0</div>
+    <div class="gen" style="flex:2.5">S05 2.5</div>
+    <div class="mg" style="flex:2.5">S06 2.5</div>
+  </div>
+  <p class="legend"><span><span class="sw"></span>генерация Kling</span><span><span class="sw mg"></span>моушн-графика</span></p>
+
+  <div class="board">
+    <!-- S01 -->
+    <article class="shot">
+      <div class="shot-head"><span class="shot-id">S01</span><span class="mono">0:00.0–0:01.5 · 1,5 с</span></div>
+      <div class="frame" role="img" aria-label="Сверху: куча мятых чеков и стикеров, рука роняет ещё один чек. Титр «Это ваша бухгалтерия?»">
+        <div class="crumple" style="left:20%;top:44%;width:30%;height:14%"></div>
+        <div class="crumple" style="left:46%;top:52%;width:28%;height:12%"></div>
+        <div class="crumple" style="left:30%;top:60%;width:34%;height:12%"></div>
+        <div class="sticky" style="left:14%;top:56%;transform:rotate(-12deg)"></div>
+        <div class="sticky" style="left:62%;top:44%;transform:rotate(9deg)"></div>
+        <div class="sticky" style="left:52%;top:66%;transform:rotate(-4deg)"></div>
+        <div class="hand" style="left:40%;top:-4%;width:18%;height:22%"></div>
+        <div class="crumple" style="left:42%;top:22%;width:14%;height:7%"></div>
+        <div class="cap" style="top:16%">Это ваша бухгалтерия?</div>
+        <div class="safe-top"></div><div class="safe-bottom"></div><div class="safe-right"></div>
+      </div>
+      <dl>
+        <dt>План</dt><dd>WS сверху, 90°</dd>
+        <dt>Камера</dt><dd>быстрый плавный наезд, 35mm</dd>
+        <dt>Действие</dt><dd>чек падает в кучу, подпрыгивает</dd>
+        <dt>Титр</dt><dd>«Это ваша бухгалтерия?»</dd>
+        <dt>Звук</dt><dd>шелест, «шлёп» на 0:00.3, бит сразу</dd>
+        <dt>Переход</dt><dd>жёсткая склейка на долю</dd>
+        <dt>Источник</dt><dd>Kling · старт: низ P04</dd>
+      </dl>
+    </article>
+
+    <!-- S02 -->
+    <article class="shot">
+      <div class="shot-head"><span class="shot-id">S02</span><span class="mono">0:01.5–0:04.5 · 3,0 с</span></div>
+      <div class="frame" role="img" aria-label="Сверху: ладонь сметает мусор вниз, открывается чистый лист в линейку с жёлтой полосой. Титр «Перепишем начисто.»">
+        <div class="paper ruled" style="left:14%;top:26%;width:62%;height:46%"></div>
+        <div class="hl" style="left:20%;top:44%;width:44%"></div>
+        <div style="position:absolute;left:20%;top:66%;width:44%;height:2%;background:var(--palette-marker);border-radius:var(--radius-sm)"></div>
+        <div class="hand" style="left:8%;top:72%;width:60%;height:10%"></div>
+        <div class="crumple" style="left:12%;top:84%;width:20%;height:8%"></div>
+        <div class="sticky" style="left:56%;top:86%;transform:rotate(14deg)"></div>
+        <span class="arrow" style="left:72%;top:60%">↓</span>
+        <div class="cap" style="top:15%">Перепишем начисто.</div>
+        <div class="safe-top"></div><div class="safe-bottom"></div><div class="safe-right"></div>
+      </div>
+      <dl>
+        <dt>План</dt><dd>WS сверху, 90°</dd>
+        <dt>Камера</dt><dd>статика, 35mm f/5.6</dd>
+        <dt>Действие</dt><dd>один взмах ладони сверху вниз, 1,2 с → чистый лист 1,8 с</dd>
+        <dt>Титр</dt><dd>«Перепишем начисто.» с 0:03.0</dd>
+        <dt>Звук</dt><dd>«свуш» бумаги, полдоли тишины, щелчок колпачка</dd>
+        <dt>Переход</dt><dd>склейка на долю</dd>
+        <dt>Источник</dt><dd>Kling · старт/финиш: P04</dd>
+      </dl>
+    </article>
+
+    <!-- S03 -->
+    <article class="shot">
+      <div class="shot-head"><span class="shot-id">S03</span><span class="mono">0:04.5–0:07.0 · 2,5 с</span></div>
+      <div class="frame" role="img" aria-label="Руки держат телефон над эскизами, на экране push «Счёт № 0047 оплачен, 45 000 ₽». Титр «Счёт ушёл в 14:02. Оплачен в 16:40.»">
+        <div class="paper" style="left:-4%;top:40%;width:56%;height:40%;transform:rotate(-6deg)"></div>
+        <div class="paper" style="left:44%;top:50%;width:60%;height:40%;transform:rotate(4deg)"></div>
+        <div class="phone" style="left:30%;top:36%;width:44%;height:40%"><i></i></div>
+        <div class="push" style="left:34%;top:42%;width:36%"><span class="label">Ledgerly</span><br><b>Счёт № 0047 оплачен</b><br><span class="dot"></span><span class="mono">45 000 ₽</span></div>
+        <div class="hand" style="left:58%;top:60%;width:40%;height:24%"></div>
+        <div class="cap" style="top:16%">Счёт ушёл в 14:02.<br>Оплачен в 16:40.</div>
+        <div class="safe-top"></div><div class="safe-bottom"></div><div class="safe-right"></div>
+      </div>
+      <dl>
+        <dt>План</dt><dd>CU рук и телефона</dd>
+        <dt>Камера</dt><dd>медленный наезд ~10%, 50mm f/2.8</dd>
+        <dt>Действие</dt><dd>экран светлеет, палец расслабляется</dd>
+        <dt>Титр</dt><dd>2 строки, смена на 0:05.75</dd>
+        <dt>Звук</dt><dd>одно тихое уведомление на 0:05.5</dd>
+        <dt>Переход</dt><dd>склейка на такт</dd>
+        <dt>Источник</dt><dd>Kling · старт: P03 + трекинг push</dd>
+      </dl>
+    </article>
+
+    <!-- S04 -->
+    <article class="shot">
+      <div class="shot-head"><span class="shot-id">S04</span><span class="mono">0:07.0–0:10.0 · 3,0 с</span></div>
+      <div class="frame" role="img" aria-label="Моушн-графика: лист Ledgerly — Поступило 196 000 ₽, Налог отложен минус 11 760 ₽, Ваше 184 240 ₽ под жёлтым маркером. Титр «Налог отложен сам.»">
+        <div class="cap" style="top:16%">Налог отложен сам.</div>
+        <div class="sheet">
+          <div class="row"><span>Поступило</span><span class="mono">196 000 ₽</span></div>
+          <div class="row"><span>Налог отложен</span><span class="mono">−11 760 ₽</span></div>
+          <div class="rule"></div>
+          <div class="total"><span>Ваше</span><mark>184 240 ₽</mark></div>
+          <div class="label" style="margin-top:8px">пример</div>
+        </div>
+        <div class="safe-top"></div><div class="safe-bottom"></div><div class="safe-right"></div>
+      </div>
+      <dl>
+        <dt>План</dt><dd>графика, фронтально</dd>
+        <dt>Анимация</dt><dd>строки 200ms → линейка 360ms → досчёт 600ms → маркер 360ms</dd>
+        <dt>Титр</dt><dd>«Налог отложен сам.»</dd>
+        <dt>Звук</dt><dd>тик карандаша на строку, «скрип» маркера</dd>
+        <dt>Переход</dt><dd>склейка на такт</dd>
+        <dt>Источник</dt><dd>моушн (AE/Figma) по motion-brief.md</dd>
+      </dl>
+    </article>
+
+    <!-- S05 -->
+    <article class="shot">
+      <div class="shot-head"><span class="shot-id">S05</span><span class="mono">0:10.0–0:12.5 · 2,5 с</span></div>
+      <div class="frame night" role="img" aria-label="Ночь, лампа. Рука закрывает ноутбук рядом с блокнотом с выделенной строкой. Титр «Можно спать.»">
+        <div class="lamp" style="left:30%;top:36%;width:80%;height:46%"></div>
+        <div class="laptop" style="left:8%;top:56%;width:52%;height:4%"></div>
+        <div class="paper ruled" style="left:48%;top:58%;width:44%;height:18%"></div>
+        <div class="hl" style="left:52%;top:66%;width:30%;height:1.6%"></div>
+        <div class="hand" style="left:2%;top:50%;width:22%;height:8%"></div>
+        <div class="cap" style="top:16%">Можно спать.</div>
+        <div class="safe-top"></div><div class="safe-bottom"></div><div class="safe-right"></div>
+      </div>
+      <dl>
+        <dt>План</dt><dd>MS стола, чуть выше уровня</dd>
+        <dt>Камера</dt><dd>статика, 50mm f/2.8</dd>
+        <dt>Действие</dt><dd>крышка закрывается к 0:11.5, свечение гаснет</dd>
+        <dt>Титр</dt><dd>«Можно спать.» (бумажный цвет на ночи)</dd>
+        <dt>Звук</dt><dd>щелчок крышки, длинный аккорд</dd>
+        <dt>Переход</dt><dd>склейка на такт</dd>
+        <dt>Источник</dt><dd>Kling · старт: P02 (правая половина)</dd>
+      </dl>
+    </article>
+
+    <!-- S06 -->
+    <article class="shot">
+      <div class="shot-head"><span class="shot-id">S06</span><span class="mono">0:12.5–0:15.0 · 2,5 с</span></div>
+      <div class="frame" role="img" aria-label="Конечная карточка: Ledgerly, «Ваши деньги. Начисто.», кнопка «Попробуйте бесплатно», «ссылка в профиле»">
+        <div class="word">Ledger<span>ly</span></div>
+        <div class="sub">Ваши деньги. Начисто.</div>
+        <div class="cta">Попробуйте бесплатно</div>
+        <div class="cta-sub">ссылка в профиле</div>
+        <div class="safe-top"></div><div class="safe-bottom"></div><div class="safe-right"></div>
+      </div>
+      <dl>
+        <dt>План</dt><dd>графика, конечная карточка</dd>
+        <dt>Анимация</dt><dd>знак 200ms → линейка под «ly» 360ms → строка → CTA; статика ≥ 1,4 с</dd>
+        <dt>Текст</dt><dd>Ledgerly / Ваши деньги. Начисто. / Попробуйте бесплатно — ссылка в профиле</dd>
+        <dt>Звук</dt><dd>финальная доля, 0,3 с тишины</dd>
+        <dt>Источник</dt><dd>моушн по motion-brief.md</dd>
+      </dl>
+    </article>
+  </div>
+
+  <section class="notes">
+    <div>
+      <h2>Склейки</h2>
+      <p>Один тип перехода — жёсткая склейка на долю. Фирменный момент — S02: «черновик» становится «чистовиком» внутри кадра одним жестом. Без переходов-эффектов.</p>
+    </div>
+    <div>
+      <h2>Цвет и свет</h2>
+      <p>S01–S03 — утро, окно слева, ~4800K. S05 — лампа ~3200K. Все генерации проходят через LUT «Чистовик» (см. photo/style-guide.md), чтобы ролик и фото совпадали.</p>
+    </div>
+    <div>
+      <h2>Проверка перед сдачей</h2>
+      <ul><li>смотреть без звука: история понятна?</li><li>титры вне штриховки</li><li>цифры совпадают с лендингом</li><li>руки: пять пальцев в каждом кадре</li></ul>
+    </div>
+  </section>
+</main>
+</body>
+</html>

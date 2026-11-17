@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: saas-campaign-site-photo-video
+expected_outcome: |
+  A design system with tokens, a landing page using them, four Flux photo prompts and a 15s vertical video script with storyboard and Kling prompts, all visually consistent.

@@ -1,0 +1,89 @@
+/* Source for tw.css. Rebuild: npx @tailwindcss/cli -i tailwind.input.css -o tw.css --minify */
+@import "tailwindcss";
+@source "./index.html";
+/* Связываем утилиты Tailwind с CSS-переменными из tokens.css (значений здесь нет — только имена). */
+    @theme inline {
+      --color-*: initial;
+      --color-bg: var(--color-bg);
+      --color-surface: var(--color-surface);
+      --color-text: var(--color-text);
+      --color-muted: var(--color-muted);
+      --color-accent: var(--color-accent);
+      --color-accent-hover: var(--color-accent-hover);
+      --color-on-accent: var(--color-on-accent);
+      --color-border: var(--color-border);
+      --color-rule: var(--color-rule);
+      --color-inverse-bg: var(--color-inverse-bg);
+      --color-inverse-text: var(--color-inverse-text);
+      --color-inverse-muted: var(--color-inverse-muted);
+      --color-focus: var(--color-focus);
+      --font-display: var(--font-display);
+      --font-text: var(--font-text);
+      --font-mono: var(--font-mono);
+      --text-xs: var(--text-xs);
+      --text-sm: var(--text-sm);
+      --text-base: var(--text-base);
+      --text-lg: var(--text-lg);
+      --text-xl: var(--text-xl);
+      --text-2xl: var(--text-2xl);
+      --text-3xl: var(--text-3xl);
+      --text-4xl: var(--text-4xl);
+      --text-5xl: var(--text-5xl);
+      --text-6xl: var(--text-6xl);
+      --leading-tight: var(--leading-tight);
+      --leading-snug: var(--leading-snug);
+      --leading-body: var(--leading-body);
+      --tracking-display: var(--tracking-display);
+      --tracking-label: var(--tracking-label);
+      --radius-none: var(--radius-none);
+      --shadow-1: var(--shadow-1);
+      --ease-standard: var(--ease-standard);
+      --ease-enter: var(--ease-enter);
+      --container-layout: var(--layout-max);
+    }
+
+    @layer base {
+      html { scroll-behavior: smooth; scroll-padding-top: calc(var(--spacing) * 20); }
+      @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+      body { @apply bg-bg text-text font-text text-base leading-body antialiased; }
+      h1, h2, h3 { @apply font-display font-medium tracking-display text-balance; }
+      :focus-visible { outline: 2px solid var(--color-focus); outline-offset: 2px; }
+      .bg-inverse-bg :focus-visible { outline-color: var(--color-inverse-text); }
+      summary::-webkit-details-marker { display: none; }
+      ::selection { background: var(--color-accent); color: var(--color-on-accent); }
+    }
+
+    @layer components {
+      .wrap { @apply mx-auto w-full max-w-layout px-6 md:px-8; }
+      .label { @apply font-mono text-xs uppercase tracking-label text-muted; }
+      .rule-t { border-top: var(--border-width, 1px) solid var(--color-border); }
+      .rule-b { border-bottom: var(--border-width, 1px) solid var(--color-border); }
+
+      /* Одна семья кнопок: primary / secondary / ghost. Радиус 0, высота 52px. */
+      .btn { @apply inline-flex min-h-13 items-center justify-center gap-3 px-7 text-sm font-semibold rounded-none;
+             transition: background-color var(--duration-fast) var(--ease-standard), color var(--duration-fast) var(--ease-standard), transform var(--duration-fast) var(--ease-standard); }
+      .btn:active { transform: translateY(1px); }
+      .btn-primary { @apply bg-accent text-on-accent hover:bg-accent-hover; }
+      .btn-secondary { @apply border border-text text-text hover:bg-text hover:text-bg; }
+      .btn-ghost { @apply px-0 text-text underline decoration-1 underline-offset-8 hover:decoration-2; }
+      .btn-sm { @apply min-h-11 px-5; }
+
+      .link { background: linear-gradient(currentColor, currentColor) left bottom / 0 1px no-repeat;
+              transition: background-size var(--duration-base) var(--ease-standard); }
+      .link:hover, .link:focus-visible { background-size: 100% 1px; }
+
+      /* Плейсхолдер фото: известковая стена с тенью ставен (жёсткие полосы, не градиент-заливка). */
+      .ph { position: relative; overflow: hidden; background-color: var(--color-surface);
+            background-image: repeating-linear-gradient(104deg, transparent 0 56px, var(--color-border) 56px 72px);
+            outline: 1px solid var(--color-border); outline-offset: -1px; }
+      .ph > figcaption, .ph > .ph-cap { @apply absolute bottom-0 left-0 right-0 flex justify-between gap-4 bg-surface px-4 py-3 font-mono text-xs text-muted; }
+
+      .cell { @apply aspect-square border border-rule; }
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      .enter { opacity: 0; transform: translateY(12px); animation: enter var(--duration-slow) var(--ease-enter) forwards; }
+      .enter-2 { animation-delay: 120ms; }
+      .enter-3 { animation-delay: 240ms; }
+      @keyframes enter { to { opacity: 1; transform: none; } }
+    }

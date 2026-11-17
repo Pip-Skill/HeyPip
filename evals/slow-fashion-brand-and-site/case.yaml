@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: slow-fashion-brand-and-site
+expected_outcome: |
+  A direction doc, a single brand source with palette and fonts, generated tokens, a working one-page HTML site using those tokens, and three Midjourney prompts that share one consistent look.

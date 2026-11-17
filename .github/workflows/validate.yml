@@ -1,0 +1,25 @@
+name: validate
+on: [push, pull_request]
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - uses: actions/setup-node@v4
+        with: { node-version: "22" }
+      - name: JSON manifests parse
+        run: |
+          python3 -c "import json;[json.load(open(f)) for f in ['.claude-plugin/plugin.json','.claude-plugin/marketplace.json','hooks/hooks.json']]"
+      - name: Script smoke test
+        run: bash tests/smoke.sh
+      - name: Hook scripts exit cleanly
+        run: |
+          export CLAUDE_PLUGIN_ROOT=$PWD
+          echo '{"tool_name":"Bash","tool_input":{"command":"ls"}}' | node scripts/hooks/guards.js pre
+          echo '{}' | node skills/heypip/taste/scripts/gate.mjs --hook claude
+      - name: Plugin manifest (Claude Code)
+        run: |
+          npm install -g @anthropic-ai/claude-code
+          claude plugin validate .

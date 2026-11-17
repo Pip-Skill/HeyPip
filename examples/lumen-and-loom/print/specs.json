@@ -1,0 +1,17 @@
+[
+  {"id":"poster-type","format":"A2","layout":"type-led","mode":"light","lang":"ru",
+   "kicker":"Lumen & Loom · Partida N.º 48","headline":"Сорок вещей в неделю.","sub":"Лён, сшитый руками в Лиссабоне. У каждой вещи — номер и подпись мастера.",
+   "meta":["Graça, Lisboa","Вт–Сб 10–19"],"cta":"Записаться на партию"},
+  {"id":"poster-number","format":"poster-50x70","layout":"big-number","mode":"dark","lang":"ru",
+   "kicker":"Partida N.º 48","mark":"Lumen & Loom","number":"40","headline":"вещей. Не больше.","sub":"Без ночных смен, без подрядчиков, без спешки.",
+   "meta":["lumenloom.example"]},
+  {"id":"ig-post","format":"ig-post","layout":"image-led","mode":"light","lang":"ru","image_note":"hero 4:5 — photo/prompts.md",
+   "kicker":"Новая партия","mark":"L&L","headline":"Лён, сшитый руками.","meta":["Partida 48 · 12/40"],"cta":"Ссылка в профиле"},
+  {"id":"story","format":"ig-story","layout":"grid","mode":"accent","lang":"ru",
+   "kicker":"Как устроена партия","headline":"Неделя одной вещи",
+   "items":[{"title":"Пн","text":"Приходит лён, стирка и усадка"},{"title":"Вт","text":"Раскрой всей партии"},{"title":"Ср–Чт","text":"Шитьё и ручная обработка швов"},{"title":"Пт","text":"Подпись мастера, номер"}],
+   "meta":["lumenloom.example"]},
+  {"id":"card","format":"card-eu","layout":"card","mode":"light","mark":"Lumen & Loom","headline":"Ana Ribeiro — mestre costureira","meta":["ana@lumenloom.example","Graça, Lisboa"]},
+  {"id":"flyer","format":"A5","layout":"split","mode":"light","lang":"ru","image_note":"detail 4:5",
+   "kicker":"Ателье · Graça","headline":"Приходите посмотреть, как шьют.","sub":"Субботы, 11:00. Час в мастерской, чай и обрезки льна на память.","meta":["Rua da Graça","Сб 11:00"],"cta":"Бесплатно"}
+]

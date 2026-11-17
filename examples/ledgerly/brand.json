@@ -1,0 +1,340 @@
+{
+  "name": "Ledgerly",
+  "version": "1.0.0",
+  "tagline": "Ваши деньги. Начисто.",
+  "positioning": {
+    "category": "Онлайн-бухгалтерия для фрилансеров и самозанятых",
+    "difference": "Показывает не оборот, а сколько из поступившего — ваше: налог откладывается в момент оплаты, сроки приходят напоминанием, ни одного термина без перевода",
+    "character": [
+      "precise",
+      "warm",
+      "wry"
+    ],
+    "character_ru": [
+      "точный",
+      "тёплый",
+      "с иронией"
+    ],
+    "is": [
+      "бумажная аккуратность и линейки",
+      "спокойная уверенность",
+      "цифры как главный герой",
+      "живые рабочие места"
+    ],
+    "is_not": [
+      "банковский глянец и градиенты",
+      "запугивание штрафами",
+      "стоковые улыбки",
+      "3D-монеты и графики-ракеты"
+    ]
+  },
+  "voice": {
+    "tone": [
+      "на «вы»",
+      "коротко",
+      "с лёгкой улыбкой",
+      "конкретно"
+    ],
+    "do": [
+      "Называть суммы, время, действия",
+      "Переводить термины на человеческий",
+      "Короткие фразы, точка в конце",
+      "Глагол + объект на кнопках"
+    ],
+    "dont": [
+      "Восклицательные знаки",
+      "«Штраф», «срочно», «успейте»",
+      "Unlock/Seamless-калька: «раскройте потенциал», «бесшовно»",
+      "Выдуманные цифры и отзывы"
+    ],
+    "examples": [
+      "Ваши деньги. Начисто.",
+      "Налог отложен. Можно спать.",
+      "Счёт ушёл в 14:02. Оплачен в 16:40.",
+      "Бухгалтерия, которая говорит по-русски."
+    ]
+  },
+  "color": {
+    "palette": {
+      "paper": "#F5F2EA",
+      "sheet": "#FCFAF5",
+      "rule": "#CBC4B5",
+      "graphite": "#585B61",
+      "ink": "#17191E",
+      "settled": "#1D6B4E",
+      "settled-deep": "#14523B",
+      "marker": "#F3D55B",
+      "brick": "#A3412A",
+      "night": "#131518",
+      "night-2": "#1C1F23"
+    },
+    "light": {
+      "bg": "paper",
+      "surface": "sheet",
+      "text": "ink",
+      "muted": "graphite",
+      "accent": "settled",
+      "accent-hover": "settled-deep",
+      "on-accent": "#FFFFFF",
+      "highlight": "marker",
+      "on-highlight": "ink",
+      "danger": "brick",
+      "border": "rule",
+      "border-strong": "#8C8A84",
+      "focus": "settled"
+    },
+    "dark": {
+      "bg": "night",
+      "surface": "night-2",
+      "text": "#EDE9DF",
+      "muted": "#A6A8AD",
+      "accent": "#62B892",
+      "accent-hover": "#7CC9A6",
+      "on-accent": "#0E1411",
+      "highlight": "#E8C94A",
+      "on-highlight": "ink",
+      "danger": "#E58A70",
+      "border": "#373B42",
+      "border-strong": "#6B6F76",
+      "focus": "#62B892"
+    },
+    "pairs": [
+      [
+        "on-highlight",
+        "highlight"
+      ],
+      [
+        "danger",
+        "bg"
+      ],
+      [
+        "danger",
+        "surface"
+      ],
+      [
+        "accent",
+        "surface",
+        "body"
+      ],
+      [
+        "accent",
+        "bg",
+        "body"
+      ],
+      [
+        "on-accent",
+        "accent-hover"
+      ],
+      [
+        "border-strong",
+        "bg",
+        "ui"
+      ]
+    ],
+    "usage": "70% бумага, 20% чернила, 6% графит и линейки, 4% акценты. «Сошлось» — только действие и статус «оплачено». Маркер — только подложка под одну ключевую цифру на экран, текст на нём всегда чернилами."
+  },
+  "type": {
+    "families": {
+      "display": {
+        "name": "Literata",
+        "fallback": "Georgia, 'PT Serif', serif",
+        "source": "google",
+        "weights": [
+          500,
+          600
+        ],
+        "scripts": [
+          "latin",
+          "cyrillic"
+        ]
+      },
+      "text": {
+        "name": "Onest",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+        "source": "google",
+        "weights": [
+          400,
+          500,
+          600
+        ],
+        "scripts": [
+          "latin",
+          "cyrillic"
+        ]
+      },
+      "mono": {
+        "name": "JetBrains Mono",
+        "fallback": "ui-monospace, Menlo, Consolas, monospace",
+        "source": "google",
+        "weights": [
+          400,
+          500
+        ],
+        "scripts": [
+          "latin",
+          "cyrillic"
+        ]
+      }
+    },
+    "base": 17,
+    "ratio": 1.333,
+    "steps": {
+      "xs": -1,
+      "sm": -0.5,
+      "base": 0,
+      "lg": 0.5,
+      "xl": 1,
+      "2xl": 2,
+      "3xl": 3,
+      "4xl": 4,
+      "5xl": 5
+    },
+    "leading": {
+      "tight": 1.08,
+      "snug": 1.25,
+      "body": 1.6
+    },
+    "tracking": {
+      "display": "-0.015em",
+      "body": "0",
+      "label": "0.08em"
+    },
+    "numerals": "font-variant-numeric: tabular-nums lining-nums для всех сумм; суммы — JetBrains Mono"
+  },
+  "space": {
+    "base": 4,
+    "scale": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      6,
+      8,
+      10,
+      12,
+      16,
+      20,
+      24,
+      32
+    ]
+  },
+  "radius": {
+    "none": 0,
+    "sm": 2,
+    "md": 4,
+    "lg": 6,
+    "pill": 999
+  },
+  "border": {
+    "width": 1
+  },
+  "elevation": {
+    "0": "none",
+    "1": "0 1px 0 rgba(23,25,30,.06)",
+    "2": "0 24px 48px -28px rgba(23,25,30,.28)"
+  },
+  "motion": {
+    "character": "precise",
+    "duration": {
+      "fast": 120,
+      "base": 200,
+      "slow": 360
+    },
+    "easing": {
+      "standard": "cubic-bezier(.2,0,0,1)",
+      "enter": "cubic-bezier(0,0,0,1)",
+      "exit": "cubic-bezier(.4,0,1,1)"
+    },
+    "rules": [
+      "Подпись бренда: линейка прочерчивается слева направо (scaleX), 360ms",
+      "Цифра досчитывается до значения не дольше 600ms, один раз",
+      "Только opacity, translate ≤ 8px и scaleX линеек",
+      "Без пружин, отскоков и бесконечных анимаций (кроме лоадера)",
+      "prefers-reduced-motion: всё мгновенно, opacity ≤ 120ms"
+    ]
+  },
+  "layout": {
+    "maxWidth": 1200,
+    "columns": 12,
+    "gutter": 24,
+    "margin": 20,
+    "breakpoints": {
+      "sm": 640,
+      "md": 768,
+      "lg": 1024,
+      "xl": 1280
+    }
+  },
+  "components": {
+    "button": {
+      "radius": "md",
+      "height": 48,
+      "weight": 600,
+      "variants": [
+        "primary",
+        "secondary",
+        "ghost"
+      ],
+      "use": "primary — одно главное действие на экран («Попробовать бесплатно»); secondary — второстепенное; ghost — в навигации"
+    },
+    "card": {
+      "radius": "lg",
+      "elevation": "0",
+      "padding": 6,
+      "use": "плоский лист с границей 1px; тень уровня 2 только у «листа» продукта в герое"
+    },
+    "input": {
+      "radius": "md",
+      "height": 48,
+      "use": "подпись над полем всегда; ошибка — кирпичный текст + иконка"
+    },
+    "amount": {
+      "font": "mono",
+      "use": "все суммы: моноширинные табличные цифры, неразрывный пробел между разрядами, ₽ после суммы"
+    },
+    "highlight": {
+      "use": "маркерная подложка под одну цифру/слово на экран; padding 0 .15em; без скругления"
+    },
+    "rule": {
+      "use": "горизонтальная линейка 1px цвета border — фирменный разделитель секций и строк"
+    }
+  },
+  "imagery": {
+    "light": "soft morning window light from the side, gentle long shadows, warm daylight around 4800K",
+    "grade": "matte film look, lifted blacks, warm paper highlights, restrained saturation, natural skin texture, no teal-orange",
+    "lens": "35mm and 50mm, f/2.8 to f/4, natural perspective, slightly above eye level",
+    "framing": "asymmetric, flush-left balance, objects and hands over faces, calm empty area reserved for a headline",
+    "subjects": "real freelancers' workspaces: laptop next to paper notebooks, invoices, a yellow highlighter, coffee, plants; people 25-40 of mixed looks working, never posing",
+    "palette_words": [
+      "warm off-white paper",
+      "ink black",
+      "graphite grey",
+      "a single muted green",
+      "a single highlighter yellow"
+    ],
+    "avoid": [
+      "stock smiles",
+      "corporate office",
+      "cold blue light",
+      "coins and piggy banks",
+      "3D renders",
+      "glossy gradients",
+      "readable fake text on screens",
+      "neon",
+      "lens flare"
+    ]
+  },
+  "film": {
+    "pace": "brisk but calm: 1.5 to 3 second shots, cuts on the beat; social 9:16 hook within 1.5s",
+    "camera": "locked-off or slow precise push-in and lateral slide, no handheld shake, no whip pans, no drones",
+    "cuts": "straight cuts on action; one signature match cut from messy notes to a clean ruled line",
+    "sound": "paper rustle, pen tick, laptop key, one soft notification chime; dry minimal plucked-synth and marimba beat at 120 BPM (1 bar = 2s, cuts on half-beats)",
+    "type_in_motion": "Literata headlines, ruled line draws under the text in 360ms, opacity in 200ms, no bounce"
+  },
+  "logo": {
+    "wordmark": "Ledgerly",
+    "file": null,
+    "note": "Словесный знак Literata 600, под «ly» — короткая маркерная линейка. Временный знак до работы над логотипом."
+  }
+}

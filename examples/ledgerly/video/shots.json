@@ -1,0 +1,22 @@
+[
+  {"id":"S01","kind":"video","use":"hook — chaos","aspect":"9:16","duration":5,
+   "subject":"overhead view of a messy pile of crumpled paper receipts and scattered pale yellow sticky notes on a warm off-white tabletop; a hand drops one more crumpled receipt onto the pile",
+   "setting":"home studio tabletop, daylight",
+   "camera_move":"strictly overhead, fast but smooth push-in toward the pile",
+   "motion":"the receipt lands and bounces once, two sticky notes slide slightly, paper settles"},
+  {"id":"S02","kind":"video","use":"signature match cut — mess to order","aspect":"9:16","duration":5,
+   "subject":"overhead view, a flat open hand sweeps crumpled receipts and sticky notes out of frame to the bottom, revealing a single clean sheet of ruled ledger paper with one yellow highlighter stroke",
+   "setting":"same warm off-white tabletop, daylight",
+   "camera_move":"locked-off overhead camera, no movement",
+   "motion":"one continuous sweep of the hand from top to bottom, papers slide away, the clean sheet stays perfectly still"},
+  {"id":"S03","kind":"video","use":"payment arrives","aspect":"9:16","duration":5,
+   "subject":"close-up of a freelance illustrator's hands holding a phone above a desk with pencil sketches; the phone screen is a soft blank pale glow",
+   "setting":"same home studio, morning",
+   "camera_move":"slow precise push-in, about ten percent",
+   "motion":"the screen brightens slightly as if a notification arrives, the thumb relaxes and rests, a small exhale in the shoulders"},
+  {"id":"S05","kind":"video","use":"evening relief","aspect":"9:16","duration":5,
+   "subject":"a hand slowly closes a silver laptop on a wooden desk at night; next to it an open ruled notebook with one yellow highlighted line and a warm desk lamp",
+   "setting":"home studio at night, dark window behind",
+   "camera_move":"locked-off, slightly above desk height",
+   "motion":"the laptop lid closes softly, the screen glow fades out, the lamp light remains, stillness"}
+]

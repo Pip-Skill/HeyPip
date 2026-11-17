@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lumen &amp; Loom — лён, сшитый руками в Лиссабоне</title>
+  <link rel="stylesheet" href="fonts/fonts.css">
+  <meta name="description" content="Льняная одежда, которую кроят и шьют вручную в лиссабонском ателье. Сорок вещей в неделю, каждая с номером и подписью мастера. Запишитесь на следующую партию.">
+  <meta property="og:title" content="Lumen &amp; Loom — сорок вещей в неделю">
+  <meta property="og:description" content="Лён, сшитый руками в Лиссабоне. Каждая вещь — с номером в партии и подписью мастера.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/og.svg">
+  <meta name="theme-color" content="#F3EFE7">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <!-- Токены: единственный источник цветов, шрифтов, шкал. Генерируются из ../brand.json -->
+  <link rel="stylesheet" href="../tokens/tokens.css">
+  <link rel="stylesheet" href="tw.css">
+</head>
+<body>
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:bg-surface focus:px-4 focus:py-3">Перейти к содержанию</a>
+
+  <!-- 1. Шапка -->
+  <header class="sticky top-0 z-40 bg-bg rule-b">
+    <div class="wrap flex h-18 items-center justify-between gap-6">
+      <a href="#top" class="font-display text-2xl leading-none tracking-display" aria-label="Lumen &amp; Loom — наверх">
+        Lumen <span class="text-accent">&amp;</span> Loom
+      </a>
+      <nav aria-label="Основная навигация" class="hidden lg:block">
+        <ul class="flex items-center gap-8 text-sm">
+          <li><a class="link" href="#tetrad">Тетрадь недели</a></li>
+          <li><a class="link" href="#partiya">В этой партии</a></li>
+          <li><a class="link" href="#atelie">Ателье</a></li>
+          <li><a class="link" href="#len">Лён</a></li>
+          <li><a class="link" href="#voprosy">Вопросы</a></li>
+        </ul>
+      </nav>
+      <div class="flex items-center gap-3">
+        <button type="button" id="theme" class="hidden min-h-11 min-w-11 items-center justify-center text-sm text-muted hover:text-text sm:inline-flex" aria-label="Переключить тему">
+          <span aria-hidden="true" class="font-mono text-xs uppercase tracking-label">Тема</span>
+        </button>
+        <a href="#lista" class="btn btn-secondary btn-sm hidden sm:inline-flex">Записаться</a>
+        <button type="button" id="menu-btn" class="inline-flex min-h-11 min-w-11 items-center justify-center lg:hidden" aria-expanded="false" aria-controls="menu">
+          <span class="font-mono text-xs uppercase tracking-label">Меню</span>
+        </button>
+      </div>
+    </div>
+    <div id="menu" class="hidden bg-bg rule-t lg:hidden">
+      <ul class="wrap flex flex-col py-4 text-lg">
+        <li><a class="flex min-h-12 items-center" href="#tetrad">Тетрадь недели</a></li>
+        <li><a class="flex min-h-12 items-center" href="#partiya">В этой партии</a></li>
+        <li><a class="flex min-h-12 items-center" href="#atelie">Ателье</a></li>
+        <li><a class="flex min-h-12 items-center" href="#len">Лён</a></li>
+        <li><a class="flex min-h-12 items-center" href="#voprosy">Вопросы</a></li>
+        <li class="pt-4"><a class="btn btn-primary w-full" href="#lista">Записаться на партию</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- 2. Герой -->
+    <section id="top" class="wrap grid grid-cols-1 gap-12 pb-24 pt-12 md:pt-16 lg:grid-cols-12 lg:gap-6 lg:pb-32 lg:pt-24">
+      <div class="flex flex-col justify-between gap-12 lg:col-span-6 lg:pr-6">
+        <p class="label enter">Сейчас шьём партию N.º 47 · Lisboa</p>
+        <div>
+          <h1 class="enter enter-2 text-6xl leading-tight">Лён, сшитый руками в&nbsp;Лиссабоне.</h1>
+          <p class="enter enter-3 mt-8 max-w-[34ch] text-lg text-muted">
+            Сорок вещей в неделю. У каждой — номер в партии и подпись мастера. Следующая партия раскраивается во вторник.
+          </p>
+          <div class="enter enter-3 mt-10 flex flex-wrap items-center gap-x-8 gap-y-4">
+            <a href="#lista" class="btn btn-primary">Записаться на партию 48</a>
+            <a href="#tetrad" class="btn btn-ghost">Как устроена партия</a>
+          </div>
+        </div>
+      </div>
+      <figure class="ph aspect-[4/5] lg:col-span-6 lg:aspect-auto lg:min-h-[44rem]" role="img" aria-label="Фото: руки портнихи прикалывают булавками льняную рубашку на раскройном столе, полосы солнца от ставен на стене.">
+        <figcaption><span>Кадр hero · 4:5</span><span>photo/prompts.md</span></figcaption>
+      </figure>
+    </section>
+
+    <!-- 3. Тетрадь недели -->
+    <section id="tetrad" class="bg-surface rule-t rule-b">
+      <div class="wrap grid grid-cols-1 gap-12 py-24 lg:grid-cols-12 lg:gap-6 lg:py-32">
+        <div class="lg:col-span-4">
+          <p class="label">Тетрадь недели</p>
+          <h2 class="mt-6 text-4xl leading-snug">Страница сорок восьмая.</h2>
+          <p class="mt-6 max-w-[40ch] text-muted">
+            Мы не держим склад. Каждую неделю открываем в тетради новую страницу на сорок строк — по строке на вещь. Когда строки заполнены, страница закрыта. Следующая — через неделю.
+          </p>
+        </div>
+        <div class="lg:col-span-7 lg:col-start-6">
+          <div class="flex items-baseline justify-between gap-4 rule-b pb-4">
+            <p class="font-mono text-sm">Партия 48 · 40 строк</p>
+            <p class="font-mono text-sm text-muted">свободно: [N] из 40</p>
+          </div>
+          <ol class="mt-6 grid grid-cols-10 gap-1.5" aria-label="Сорок мест в партии">
+            <!-- 40 клеток генерируются скриптом ниже; заполненные подключаются из системы заказов -->
+          </ol>
+          <p class="mt-3 font-mono text-xs text-muted">Заполненные строки подключаются из системы заказов [ИНТЕГРАЦИЯ].</p>
+
+          <dl class="mt-12 grid grid-cols-1 sm:grid-cols-5">
+            <div class="rule-t py-5 sm:pr-4"><dt class="label">Пн</dt><dd class="mt-2 text-sm">Приходит лён, стирка и усадка</dd></div>
+            <div class="rule-t py-5 sm:pr-4"><dt class="label">Вт</dt><dd class="mt-2 text-sm">Раскрой всей партии</dd></div>
+            <div class="rule-t py-5 sm:pr-4"><dt class="label">Ср–Чт</dt><dd class="mt-2 text-sm">Шитьё и ручная обработка швов</dd></div>
+            <div class="rule-t py-5 sm:pr-4"><dt class="label">Пт</dt><dd class="mt-2 text-sm">Подпись мастера, номер</dd></div>
+            <div class="rule-t py-5"><dt class="label">Сб</dt><dd class="mt-2 text-sm">Отправка [СРОК ДОСТАВКИ]</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Утверждение -->
+    <section class="wrap py-32 lg:py-40">
+      <div class="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-6">
+        <h2 class="text-6xl leading-tight lg:col-span-9">Сорок вещей в&nbsp;неделю. Не&nbsp;больше.</h2>
+        <div class="max-w-[52ch] space-y-5 text-lg text-muted lg:col-span-5 lg:col-start-6">
+          <p>Сорок — это столько, сколько наше ателье успевает сделать хорошо. Без ночных смен, без подрядчиков, без спешки.</p>
+          <p>Мы могли бы шить больше. Тогда это были бы другие вещи.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. В этой партии -->
+    <section id="partiya" class="wrap pb-24 lg:pb-32">
+      <div class="flex flex-wrap items-end justify-between gap-6 rule-b pb-6">
+        <div>
+          <p class="label">Partida N.º 48</p>
+          <h2 class="mt-4 text-4xl leading-snug">Что шьём на&nbsp;этой неделе</h2>
+        </div>
+        <p class="max-w-[36ch] text-sm text-muted">Четыре модели. Цвета — суровый, уголь, индиго. Размеры XS–XL, [ТАБЛИЦА РАЗМЕРОВ].</p>
+      </div>
+
+      <ul class="grid grid-cols-1 gap-x-6 gap-y-16 pt-12 md:grid-cols-2 lg:grid-cols-12">
+        <li class="lg:col-span-5">
+          <figure class="ph aspect-[4/5]" role="img" aria-label="Фото: рубашка Graça из сурового льна на деревянной вешалке у известковой стены."><span class="ph-cap"><span>Camisa Graça</span><span>4:5</span></span></figure>
+          <div class="mt-5 flex items-baseline justify-between gap-4">
+            <h3 class="text-2xl">Camisa Graça</h3><p class="font-mono text-sm">[ЦЕНА] €</p>
+          </div>
+          <p class="mt-2 text-sm text-muted">Рубашка свободного кроя, перламутровые пуговицы, швы обработаны вручную. Лён [ГРАММАТУРА] г/м².</p>
+        </li>
+        <li class="lg:col-span-5 lg:col-start-8 lg:mt-32">
+          <figure class="ph aspect-[4/5]" role="img" aria-label="Фото: платье Tejo цвета индиго в движении, тень от ставен на ткани."><span class="ph-cap"><span>Vestido Tejo</span><span>4:5</span></span></figure>
+          <div class="mt-5 flex items-baseline justify-between gap-4">
+            <h3 class="text-2xl">Vestido Tejo</h3><p class="font-mono text-sm">[ЦЕНА] €</p>
+          </div>
+          <p class="mt-2 text-sm text-muted">Платье-рубашка ниже колена, пояс из того же полотна. Лён [ГРАММАТУРА] г/м².</p>
+        </li>
+        <li class="lg:col-span-4 lg:col-start-2">
+          <figure class="ph aspect-[4/5]" role="img" aria-label="Фото: брюки Alfama цвета угля, сложенные на каменной ступени."><span class="ph-cap"><span>Calça Alfama</span><span>4:5</span></span></figure>
+          <div class="mt-5 flex items-baseline justify-between gap-4">
+            <h3 class="text-2xl">Calça Alfama</h3><p class="font-mono text-sm">[ЦЕНА] €</p>
+          </div>
+          <p class="mt-2 text-sm text-muted">Широкие брюки на мягкой посадке, карманы-обтачки. Лён [ГРАММАТУРА] г/м².</p>
+        </li>
+        <li class="lg:col-span-5 lg:col-start-7 lg:mt-24">
+          <figure class="ph aspect-[4/5]" role="img" aria-label="Фото: жакет Estrela из плотного льна на спинке деревянного стула."><span class="ph-cap"><span>Casaco Estrela</span><span>4:5</span></span></figure>
+          <div class="mt-5 flex items-baseline justify-between gap-4">
+            <h3 class="text-2xl">Casaco Estrela</h3><p class="font-mono text-sm">[ЦЕНА] €</p>
+          </div>
+          <p class="mt-2 text-sm text-muted">Жакет без подкладки из плотного льна, накладные карманы. Лён [ГРАММАТУРА] г/м².</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 6. Фото-пауза -->
+    <figure class="ph aspect-[4/5] w-full sm:aspect-[16/9]" role="img" aria-label="Фото: человек в льняной рубашке идёт по калсаде в Алфаме, резкие тени позднего дня.">
+      <figcaption><span>Кадр street · 16:9 · Alfama, 17:40</span><span>photo/prompts.md</span></figcaption>
+    </figure>
+
+    <!-- 7. Ателье -->
+    <section id="atelie" class="wrap grid grid-cols-1 gap-12 py-24 lg:grid-cols-12 lg:gap-6 lg:py-32">
+      <figure class="ph aspect-[4/5] lg:col-span-5" role="img" aria-label="Фото: крупный план ручного шва и хлопкового ярлыка с номером, написанным чернилами.">
+        <figcaption><span>Кадр detail · 4:5</span><span>photo/prompts.md</span></figcaption>
+      </figure>
+      <div class="lg:col-span-6 lg:col-start-7 lg:pt-12">
+        <p class="label">Ателье · Graça, Lisboa</p>
+        <h2 class="mt-6 text-4xl leading-snug">Раскроено во&nbsp;вторник. Подписано мастером.</h2>
+        <p class="mt-6 max-w-[52ch] text-muted">
+          Наше ателье — одна комната на холме Graça, [АДРЕС]. Здесь [ЧИСЛО] мастеров кроят, шьют и подписывают каждую вещь. От рулона до коробки вещь не покидает эту комнату.
+        </p>
+        <ol class="mt-12">
+          <li class="grid grid-cols-[4rem_1fr] gap-4 rule-t py-6">
+            <span class="font-mono text-sm text-muted">01</span>
+            <div><h3 class="font-text text-base font-semibold tracking-normal">Раскрой по одному</h3><p class="mt-1 text-sm text-muted">Каждую деталь кроят ножницами, не ножом по стопке. Медленнее, зато нить ложится ровно.</p></div>
+          </li>
+          <li class="grid grid-cols-[4rem_1fr] gap-4 rule-t py-6">
+            <span class="font-mono text-sm text-muted">02</span>
+            <div><h3 class="font-text text-base font-semibold tracking-normal">Французские швы</h3><p class="mt-1 text-sm text-muted">Внутри вещь так же аккуратна, как снаружи. Срезы закрыты, ничего не сыпется.</p></div>
+          </li>
+          <li class="grid grid-cols-[4rem_1fr] gap-4 rule-t py-6">
+            <span class="font-mono text-sm text-muted">03</span>
+            <div><h3 class="font-text text-base font-semibold tracking-normal">Номер и подпись</h3><p class="mt-1 text-sm text-muted">На ярлыке — номер партии, номер вещи и имя мастера. Например: N.º 48 · 017/40.</p></div>
+          </li>
+          <li class="grid grid-cols-[4rem_1fr] gap-4 rule-t rule-b py-6">
+            <span class="font-mono text-sm text-muted">04</span>
+            <div><h3 class="font-text text-base font-semibold tracking-normal">Ремонт у тех же рук</h3><p class="mt-1 text-sm text-muted">Если шов разойдётся, вещь вернётся к нам. Условия — [УСЛОВИЯ РЕМОНТА].</p></div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 8. Лён -->
+    <section id="len" class="bg-surface rule-t rule-b">
+      <div class="wrap grid grid-cols-1 gap-12 py-24 lg:grid-cols-12 lg:gap-6 lg:py-32">
+        <div class="lg:col-span-6">
+          <p class="label">Linho</p>
+          <h2 class="mt-6 text-5xl leading-tight">Лён мнётся. Так и&nbsp;задумано.</h2>
+        </div>
+        <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:col-span-6">
+          <div>
+            <h3 class="font-text text-base font-semibold tracking-normal">Откуда</h3>
+            <p class="mt-2 text-sm text-muted">Полотно — [ПОСТАВЩИК ЛЬНА]. Каждый рулон стираем до раскроя, чтобы вещь не садилась у вас.</p>
+          </div>
+          <div>
+            <h3 class="font-text text-base font-semibold tracking-normal">Как носить</h3>
+            <p class="mt-2 text-sm text-muted">Лён дышит и с каждой стиркой становится мягче. Складки — часть вещи, а не дефект.</p>
+          </div>
+          <div>
+            <h3 class="font-text text-base font-semibold tracking-normal">Как стирать</h3>
+            <p class="mt-2 text-sm text-muted">Деликатный режим, 30–40 °C, без отбеливателя. Сушить на вешалке. Гладить влажным — или не гладить вовсе.</p>
+          </div>
+          <div>
+            <h3 class="font-text text-base font-semibold tracking-normal">Сколько служит</h3>
+            <p class="mt-2 text-sm text-muted">Годы, если не торопиться с сушилкой. А когда понадобится — починим.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. Вопросы -->
+    <section id="voprosy" class="wrap grid grid-cols-1 gap-12 py-24 lg:grid-cols-12 lg:gap-6 lg:py-32">
+      <h2 class="text-4xl leading-snug lg:col-span-4">Вопросы</h2>
+      <div class="lg:col-span-7 lg:col-start-6">
+        <details class="group rule-t">
+          <summary class="flex min-h-16 cursor-pointer list-none items-center justify-between gap-6 py-5 text-lg font-medium">Почему лист ожидания, а не корзина?<span aria-hidden="true" class="font-mono text-muted group-open:rotate-45 transition-transform">+</span></summary>
+          <p class="max-w-[60ch] pb-6 text-muted">Мы шьём под конкретную партию и не держим склад. Лист ожидания — это очередь на строку в тетради. Когда партия открывается, вы получаете письмо и 48 часов, чтобы подтвердить заказ.</p>
+        </details>
+        <details class="group rule-t">
+          <summary class="flex min-h-16 cursor-pointer list-none items-center justify-between gap-6 py-5 text-lg font-medium">Сколько ждать вещь?<span aria-hidden="true" class="font-mono text-muted group-open:rotate-45 transition-transform">+</span></summary>
+          <p class="max-w-[60ch] pb-6 text-muted">Партия шьётся неделю. Плюс доставка: [СРОК ДОСТАВКИ ПО ПОРТУГАЛИИ / ЕС]. Если в ближайшей партии нет мест — запишем на следующую.</p>
+        </details>
+        <details class="group rule-t">
+          <summary class="flex min-h-16 cursor-pointer list-none items-center justify-between gap-6 py-5 text-lg font-medium">Как выбрать размер?<span aria-hidden="true" class="font-mono text-muted group-open:rotate-45 transition-transform">+</span></summary>
+          <p class="max-w-[60ch] pb-6 text-muted">Размеры XS–XL, [ТАБЛИЦА РАЗМЕРОВ]. Не уверены — пришлите мерки, мастер ответит лично.</p>
+        </details>
+        <details class="group rule-t">
+          <summary class="flex min-h-16 cursor-pointer list-none items-center justify-between gap-6 py-5 text-lg font-medium">Можно вернуть?<span aria-hidden="true" class="font-mono text-muted group-open:rotate-45 transition-transform">+</span></summary>
+          <p class="max-w-[60ch] pb-6 text-muted">Да, в течение 14 дней по законодательству ЕС о дистанционной торговле. Подробности — [УСЛОВИЯ ВОЗВРАТА].</p>
+        </details>
+        <details class="group rule-t rule-b">
+          <summary class="flex min-h-16 cursor-pointer list-none items-center justify-between gap-6 py-5 text-lg font-medium">Можно приехать в ателье?<span aria-hidden="true" class="font-mono text-muted group-open:rotate-45 transition-transform">+</span></summary>
+          <p class="max-w-[60ch] pb-6 text-muted">По субботам, по записи: [ВРЕМЯ ПРИЁМА]. Покажем ткани и примерим образцы.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- 10. Финал: лист ожидания -->
+    <section id="lista" class="bg-inverse-bg text-inverse-text" aria-labelledby="lista-h">
+      <div class="wrap grid grid-cols-1 gap-12 py-24 lg:grid-cols-12 lg:gap-6 lg:py-32">
+        <div class="lg:col-span-6">
+          <p class="font-mono text-xs uppercase tracking-label text-inverse-muted">Partida N.º 48 · раскрой во вторник</p>
+          <h2 id="lista-h" class="mt-6 text-5xl leading-tight">Следующая страница открывается во&nbsp;вторник.</h2>
+          <p class="mt-6 max-w-[44ch] text-inverse-muted">Оставьте e-mail — напишем в понедельник, за день до раскроя. Одно письмо в неделю, без рассылок со скидками.</p>
+        </div>
+        <form id="waitlist" class="lg:col-span-5 lg:col-start-8 lg:self-end" novalidate>
+          <label for="email" class="block text-sm font-medium">E-mail</label>
+          <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-help email-error"
+                 class="mt-3 block h-13 w-full rounded-none border-0 border-b border-inverse-muted bg-transparent px-0 text-lg text-inverse-text placeholder:text-inverse-muted focus:border-inverse-text focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-inverse-text"
+                 placeholder="имя@почта.pt">
+          <p id="email-help" class="mt-3 text-sm text-inverse-muted">Адрес нужен только для письма о партии.</p>
+          <p id="email-error" class="mt-3 hidden text-sm font-medium" role="alert"></p>
+
+          <label class="mt-6 flex min-h-11 cursor-pointer items-start gap-3 text-sm text-inverse-muted">
+            <input type="checkbox" name="consent" required class="mt-1 size-5 shrink-0 rounded-none accent-inverse-text">
+            <span>Согласен(на) с <a class="underline underline-offset-4 hover:text-inverse-text" href="#">политикой конфиденциальности</a>.</span>
+          </label>
+
+          <button type="submit" class="btn mt-8 w-full bg-inverse-text text-inverse-bg hover:bg-border sm:w-auto">Записаться на партию 48</button>
+          <p id="form-status" class="mt-6 min-h-6 font-mono text-sm" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- 11. Подвал -->
+  <footer class="wrap grid grid-cols-1 gap-10 py-16 text-sm text-muted md:grid-cols-12 md:gap-6">
+    <div class="md:col-span-5">
+      <p class="font-display text-2xl leading-none text-text">Lumen <span class="text-accent">&amp;</span> Loom</p>
+      <p class="mt-4">Ателье: [АДРЕС АТЕЛЬЕ], Graça, 1170 Lisboa, Portugal</p>
+      <p class="mt-1">[ЮРИДИЧЕСКОЕ ЛИЦО] · NIF [НОМЕР]</p>
+    </div>
+    <ul class="space-y-1 md:col-span-3 md:col-start-7">
+      <li><a class="link inline-flex min-h-11 items-center" href="mailto:[E-MAIL]">[E-MAIL]</a></li>
+      <li><a class="link inline-flex min-h-11 items-center" href="#">Instagram [ССЫЛКА]</a></li>
+    </ul>
+    <ul class="space-y-1 md:col-span-3">
+      <li><a class="link inline-flex min-h-11 items-center" href="#">Política de privacidade</a></li>
+      <li><a class="link inline-flex min-h-11 items-center" href="#">Условия продажи и возврата</a></li>
+      <li><a class="link inline-flex min-h-11 items-center" href="https://www.livroreclamacoes.pt" rel="noopener">Livro de Reclamações</a></li>
+    </ul>
+    <p class="font-mono text-xs md:col-span-12">© 2026 Lumen &amp; Loom · Feito à mão em Lisboa</p>
+  </footer>
+
+  <script>
+    // 40 строк партии
+    const grid = document.querySelector('#tetrad ol');
+    for (let i = 1; i <= 40; i++) {
+      const li = document.createElement('li');
+      li.className = 'cell';
+      li.setAttribute('aria-label', 'Строка ' + String(i).padStart(3, '0'));
+      grid.appendChild(li);
+    }
+
+    // Мобильное меню: открытие, закрытие по Esc и по клику на пункт
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
+    const setMenu = (open) => { menu.classList.toggle('hidden', !open); btn.setAttribute('aria-expanded', String(open)); };
+    btn.addEventListener('click', () => setMenu(menu.classList.contains('hidden')));
+    menu.addEventListener('click', (e) => { if (e.target.closest('a')) setMenu(false); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !menu.classList.contains('hidden')) { setMenu(false); btn.focus(); } });
+
+    // Тема: системная по умолчанию, ручной выбор сохраняется
+    const root = document.documentElement;
+    const saved = localStorage.getItem('ll-theme');
+    if (saved) root.dataset.theme = saved;
+    document.getElementById('theme').addEventListener('click', () => {
+      const dark = root.dataset.theme ? root.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+      root.dataset.theme = dark ? 'light' : 'dark';
+      localStorage.setItem('ll-theme', root.dataset.theme);
+    });
+
+    // Лист ожидания: валидация и состояния (ошибка → отправка → успех)
+    const form = document.getElementById('waitlist');
+    const email = document.getElementById('email');
+    const err = document.getElementById('email-error');
+    const status = document.getElementById('form-status');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      err.classList.add('hidden'); email.removeAttribute('aria-invalid');
+      if (!email.validity.valid) {
+        err.textContent = email.value ? 'Похоже, в адресе опечатка. Проверьте символ @ и домен.' : 'Укажите e-mail — без него мы не сможем написать о партии.';
+        err.classList.remove('hidden'); email.setAttribute('aria-invalid', 'true'); email.focus(); return;
+      }
+      if (!form.consent.checked) {
+        status.textContent = 'Отметьте согласие с политикой конфиденциальности.'; form.consent.focus(); return;
+      }
+      const submit = form.querySelector('button[type=submit]');
+      submit.disabled = true; submit.textContent = 'Записываем…';
+      // [ИНТЕГРАЦИЯ] заменить на запрос к сервису рассылки
+      await new Promise((r) => setTimeout(r, 600));
+      form.reset(); submit.disabled = false; submit.textContent = 'Записаться на партию 48';
+      status.textContent = 'Вы в тетради. Напишем в понедельник, за день до раскроя.';
+    });
+  </script>
+</body>
+</html>
