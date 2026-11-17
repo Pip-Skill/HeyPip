@@ -24,4 +24,4 @@ Request (may be empty): $ARGUMENTS
    one next command, e.g. `/heypip:poster` to make a poster in the same style.
 6. End with: "Tip: `/heypip:help` lists everything Pip can do."
 
-_Paths like `scripts/…` are inside the heypip skill folder (in this plugin: `skills/heypip/`)._
+_This edition has no `scripts/` folder: where a step names a script, do that step yourself as the heypip skill's "Directory edition" note says._

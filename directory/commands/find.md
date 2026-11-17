@@ -9,4 +9,4 @@ Use the **heypip** skill's library. Run:
 
 (domains: product, reason, style, color, type, font, landing, ux, app, chart, icon, motion, stack:<name>; run `lookup.py domains` for the list). Summarise the top results in plain words and say how you'd apply them to this project; don't paste raw rows.
 
-_Paths like `scripts/…`, `references/…`, `taste/…` are inside the heypip skill folder (in this plugin: `skills/heypip/`)._
+_Paths like `references/…` are inside the heypip skill folder (`skills/heypip/`). This edition has no `scripts/` folder: where a step names a script, do that step yourself as the heypip skill's "Directory edition" note says._

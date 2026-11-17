@@ -14,4 +14,4 @@ Run phases 1 → 2 → 3:
 
 Deliver: direction.md, moodboard.html, brand.json, tokens/, brandbook.html. Offer next: /heypip:site, /heypip:poster, /heypip:photo.
 
-_Paths like `scripts/…`, `references/…`, `taste/…` are inside the heypip skill folder (in this plugin: `skills/heypip/`)._
+_Paths like `references/…` are inside the heypip skill folder (`skills/heypip/`). This edition has no `scripts/` folder: where a step names a script, do that step yourself as the heypip skill's "Directory edition" note says._

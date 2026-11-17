@@ -12,4 +12,4 @@ Phase 3 only (`references/system.md`).
 - From existing colours/fonts/site: read them and write `brand.json` by hand.
 Then `check_contrast.py` (fix until it passes), `build_tokens.py brand.json tokens/`, `render_brandbook.py`, and `fetch_fonts.py brand.json fonts/` if they want self-hosted fonts.
 
-_Paths like `scripts/…`, `references/…`, `taste/…` are inside the heypip skill folder (in this plugin: `skills/heypip/`)._
+_Paths like `references/…` are inside the heypip skill folder (`skills/heypip/`). This edition has no `scripts/` folder: where a step names a script, do that step yourself as the heypip skill's "Directory edition" note says._

@@ -9,4 +9,4 @@ Request: $ARGUMENTS
 
 Phase 4b (`references/photo.md`). Needs `brand.json` (make a compact one if missing: palette, imagery, mood). Write the style guide and `photo/shots.json`, run `scripts/prompt_pack.py brand.json photo/shots.json photo/prompts.md --models <models>`, then hand-tune the prompts.
 
-_Paths like `scripts/…`, `references/…`, `taste/…` are inside the heypip skill folder (in this plugin: `skills/heypip/`)._
+_Paths like `references/…` are inside the heypip skill folder (`skills/heypip/`). This edition has no `scripts/` folder: where a step names a script, do that step yourself as the heypip skill's "Directory edition" note says._

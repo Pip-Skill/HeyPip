@@ -7,4 +7,4 @@ Use the **heypip** skill and run the full chain (SKILL.md, all phases). Request:
 
 Order: brief → direction (show it, get a yes) → system → site (web engine) → print set → photo prompts → video → review. Use `suggest_brand.py` to start the system from data.
 
-_Paths like `scripts/…`, `references/…`, `taste/…` are inside the heypip skill folder (in this plugin: `skills/heypip/`)._
+_Paths like `references/…` are inside the heypip skill folder (`skills/heypip/`). This edition has no `scripts/` folder: where a step names a script, do that step yourself as the heypip skill's "Directory edition" note says._

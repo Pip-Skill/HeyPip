@@ -12,4 +12,4 @@ Write `print/specs.json` (one entry per format, see `templates/print.example.jso
 `python3 scripts/render_print.py brand.json print/specs.json print/ --export pdf,png --fonts print/fonts`
 Look at every PNG, fix composition and copy, re-render. Deliver the PDFs and PNGs.
 
-_Paths like `scripts/…`, `references/…`, `taste/…` are inside the heypip skill folder (in this plugin: `skills/heypip/`)._
+_Paths like `references/…` are inside the heypip skill folder (`skills/heypip/`). This edition has no `scripts/` folder: where a step names a script, do that step yourself as the heypip skill's "Directory edition" note says._

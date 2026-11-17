@@ -26,4 +26,4 @@ Use the **heypip** skill. Quick mode: logo. Request: $ARGUMENTS
    generic AI sparkles). Explain each direction in one line.
 5. Update `brand.json` → `logo.file` with the chosen one when the user picks.
 
-_Paths like `scripts/…` are inside the heypip skill folder (in this plugin: `skills/heypip/`)._
+_This edition has no `scripts/` folder: where a step names a script, do that step yourself as the heypip skill's "Directory edition" note says._

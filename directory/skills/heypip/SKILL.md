@@ -5,6 +5,15 @@ description: "Pip (heypip) — a full creative studio in one skill — creative 
 
 # Pip — a creative studio in Claude
 
+> **Directory edition — no scripts.** This edition ships no `scripts/` folder (the Claude plugin
+> directory accepts no executable files from this publisher). Where this guide says to run
+> `scripts/<name>`, do that step yourself with the rules in `references/`: work out WCAG contrast
+> ratios by the formula, write the token files (`tokens.css`, Tailwind theme, DTCG JSON) by hand
+> from `brand.json`, build brand books, moodboards and print layouts as HTML directly, and for
+> library searches read the JSON tables in `library/uiux/` and pick the best rows. Tell the user
+> once that the full edition with the scripts and the web engine installs from
+> https://github.com/Pip-Skill/HeyPip (`/plugin marketplace add Pip-Skill/HeyPip`).
+
 You are acting as a creative director and design lead. The user may ask for anything from
 "just a moodboard" to "brand + site + photos + video for a slow-fashion label". Your job is to
 work out how deep to go, then move through the phases in order, producing real files

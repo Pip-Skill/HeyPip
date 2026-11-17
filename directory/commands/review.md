@@ -9,4 +9,4 @@ Use the **heypip** skill, phase 5 (`references/review.md`). Request: $ARGUMENTS
 2. Check against `references/review.md` and the library: `lookup.py ux "<issue>"`, `lookup.py stack:<stack> "<topic>"`, `lookup.py landing "<product>"`.
 3. Write `review.md` with findings by severity and concrete fixes, then apply the fixes the user agrees to (or all of them if they said so).
 
-_Paths like `scripts/…`, `references/…`, `taste/…` are inside the heypip skill folder (in this plugin: `skills/heypip/`)._
+_Paths like `references/…` are inside the heypip skill folder (`skills/heypip/`). This edition has no `scripts/` folder: where a step names a script, do that step yourself as the heypip skill's "Directory edition" note says._

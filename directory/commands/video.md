@@ -9,4 +9,4 @@ Request: $ARGUMENTS
 
 Phase 4c (`references/video.md`). Needs `brand.json` (compact one if missing: palette, film, motion). Script with timings that add up, `video/storyboard.html`, motion brief, `video/shots.json` → `prompt_pack.py` for the chosen models.
 
-_Paths like `scripts/…`, `references/…`, `taste/…` are inside the heypip skill folder (in this plugin: `skills/heypip/`)._
+_Paths like `references/…` are inside the heypip skill folder (`skills/heypip/`). This edition has no `scripts/` folder: where a step names a script, do that step yourself as the heypip skill's "Directory edition" note says._

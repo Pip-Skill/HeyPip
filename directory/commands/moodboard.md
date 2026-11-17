@@ -9,4 +9,4 @@ Request: $ARGUMENTS
 
 Phases 1–2 only. Read `references/direction.md` and `references/styles.md`. Use `python3 scripts/lookup.py style "<words>"` and `lookup.py type` to ground choices. Produce 2–3 distinct directions, each with a moodboard via `scripts/render_moodboard.py`. Stop and let the user pick.
 
-_Paths like `scripts/…`, `references/…`, `taste/…` are inside the heypip skill folder (in this plugin: `skills/heypip/`)._
+_Paths like `references/…` are inside the heypip skill folder (`skills/heypip/`). This edition has no `scripts/` folder: where a step names a script, do that step yourself as the heypip skill's "Directory edition" note says._
