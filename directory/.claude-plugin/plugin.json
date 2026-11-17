@@ -1,7 +1,7 @@
 {
   "name": "heypip",
   "version": "2.0.0",
-  "description": "A creative studio and dev team in one plugin: brand, design system, websites, posters, photo and video prompts from one brand.json — plus engineering agents, commands and hooks.",
+  "description": "A creative studio and dev team in one plugin: brand, design system, websites, posters, photo and video prompts from one brand.json — plus engineering agents and commands.",
   "author": {
     "name": "Pip-Skill"
   },
@@ -26,5 +26,7 @@
   ],
   "displayName": "Pip",
   "homepage": "https://github.com/Pip-Skill/HeyPip",
-  "repository": "https://github.com/Pip-Skill/HeyPip"
+  "repository": "https://github.com/Pip-Skill/HeyPip",
+  "supportUrl": "https://github.com/Pip-Skill/HeyPip/issues",
+  "documentationUrl": "https://github.com/Pip-Skill/HeyPip/blob/main/GUIDE.md"
 }
