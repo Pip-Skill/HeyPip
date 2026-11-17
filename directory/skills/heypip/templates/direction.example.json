@@ -1,0 +1,17 @@
+{
+  "brand":"Lumen & Loom","direction":"Slow Light",
+  "summary":"Warm minimal with editorial type: bone grounds, rust accent, lots of air, hand-made texture.",
+  "fonts":{"display":"Fraunces","text":"Inter"},
+  "palette":[{"name":"bone","hex":"#EFE9DF","role":"bg"},{"name":"oat","hex":"#D9CFBF"},{"name":"stone","hex":"#5E574D"},{"name":"ink","hex":"#1E1B17","role":"text"},{"name":"rust","hex":"#A84B27","role":"accent"}],
+  "tiles":[
+    {"type":"type","sample":"Made slowly.","label":"display"},
+    {"type":"color","hex":"#A84B27","label":"rust — one accent"},
+    {"type":"texture","pattern":"linen","colors":["#EFE9DF","#D9CFBF"],"label":"linen"},
+    {"type":"composition","layout":"asym-left","label":"hero: text left, image right"},
+    {"type":"words","items":["unhurried","tactile","honest","warm"]},
+    {"type":"reference","title":"Light","text":"Low side light, long soft shadows, no flash."},
+    {"type":"prompt","title":"hero","text":"editorial photograph, linen throw on oak bench, low warm side light, 50mm, muted film grade"},
+    {"type":"texture","pattern":"grain","colors":["#D9CFBF","#5E574D"],"label":"film grain"},
+    {"type":"composition","layout":"grid-3","label":"product grid"}
+  ]
+}

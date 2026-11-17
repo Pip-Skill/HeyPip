@@ -1,0 +1,104 @@
+{
+  "name": "Lumen & Loom",
+  "version": "1.0.0",
+  "tagline": "Made slowly, in Lisbon.",
+  "positioning": {
+    "category": "Independent slow-fashion label",
+    "difference": "Made-to-order linen garments, cut and sewn in a six-person Lisbon atelier, about 40 pieces a week",
+    "character": ["quiet", "tactile", "defiant"],
+    "is": ["quiet confidence", "tactile and material", "editorial pacing"],
+    "is_not": ["minimal for the sake of it", "glossy or plastic", "e-commerce grid noise"]
+  },
+  "voice": {
+    "tone": ["plain", "warm", "unhurried"],
+    "do": ["Short sentences", "Name materials and places", "Speak about the making"],
+    "dont": ["Hype words", "Exclamation marks", "Fake scarcity"],
+    "examples": ["Made slowly. Worn for years.", "Linen from Guimarães. Cut on Tuesdays.", "Six hands. One shirt."]
+  },
+  "color": {
+    "palette": {
+      "bone": "#EFE9DF",
+      "paper": "#F7F3EC",
+      "oat": "#D9CFBF",
+      "stone": "#5E574D",
+      "ink": "#1E1B17",
+      "rust": "#A84B27",
+      "night": "#151310",
+      "night-2": "#211E1A"
+    },
+    "light": {
+      "bg": "bone",
+      "surface": "paper",
+      "text": "ink",
+      "muted": "stone",
+      "accent": "rust",
+      "on-accent": "#FFFFFF",
+      "border": "oat",
+      "focus": "rust"
+    },
+    "dark": {
+      "bg": "night",
+      "surface": "night-2",
+      "text": "bone",
+      "muted": "#B3AA9C",
+      "accent": "#D97A53",
+      "on-accent": "#1E1B17",
+      "border": "#3A352E",
+      "focus": "#D97A53"
+    },
+    "usage": "70% bone, 20% ink, 10% rust. Rust is only for actions and the active state."
+  },
+  "type": {
+    "families": {
+      "display": {"name": "Fraunces", "fallback": "Georgia, 'Times New Roman', serif", "source": "google", "weights": [400, 600]},
+      "text": {"name": "Inter", "fallback": "system-ui, -apple-system, 'Segoe UI', sans-serif", "source": "google", "weights": [400, 500, 600]},
+      "mono": {"name": "JetBrains Mono", "fallback": "ui-monospace, Menlo, monospace", "source": "google", "weights": [400]}
+    },
+    "base": 17,
+    "ratio": 1.25,
+    "steps": {"xs": -2, "sm": -1, "base": 0, "lg": 1, "xl": 2, "2xl": 3, "3xl": 4, "4xl": 5, "5xl": 6, "6xl": 7},
+    "leading": {"tight": 1.05, "snug": 1.25, "body": 1.6},
+    "tracking": {"display": "-0.02em", "body": "0", "label": "0.1em"}
+  },
+  "space": {"base": 4, "scale": [0, 1, 2, 3, 4, 6, 8, 12, 16, 24, 32]},
+  "radius": {"none": 0, "sm": 2, "md": 4, "lg": 8, "pill": 999},
+  "border": {"width": 1},
+  "elevation": {
+    "0": "none",
+    "1": "0 1px 2px rgba(30,27,23,.06)",
+    "2": "0 12px 32px -16px rgba(30,27,23,.22)"
+  },
+  "motion": {
+    "character": "calm",
+    "duration": {"fast": 140, "base": 260, "slow": 520},
+    "easing": {
+      "standard": "cubic-bezier(.2,0,0,1)",
+      "enter": "cubic-bezier(0,0,0,1)",
+      "exit": "cubic-bezier(.3,0,1,1)"
+    },
+    "rules": ["Only opacity and translate under 16px", "Nothing loops except loaders", "Hero enters once, max 600ms"]
+  },
+  "layout": {"maxWidth": 1240, "columns": 12, "gutter": 24, "margin": 32, "breakpoints": {"sm": 640, "md": 768, "lg": 1024, "xl": 1280}},
+  "components": {
+    "button": {"radius": "md", "height": 48, "weight": 600, "variants": ["primary", "secondary", "ghost"]},
+    "card": {"radius": "lg", "elevation": "1", "padding": 6},
+    "input": {"radius": "md", "height": 48}
+  },
+  "imagery": {
+    "light": "soft north-window daylight from camera left, low contrast",
+    "grade": "matte, warm highlights, lifted blacks, natural skin, no teal-orange",
+    "lens": "50mm and 85mm, f/2 to f/2.8, shallow depth of field",
+    "framing": "asymmetric, generous negative space, hands and textures over faces",
+    "subjects": "makers at work, raw linen, finished garments on real people of mixed ages",
+    "palette_words": ["bone", "oat", "rust", "ink"],
+    "avoid": ["seamless white studio", "heavy retouching", "stock smiles", "neon", "lens flare"]
+  },
+  "film": {
+    "pace": "slow, 3 to 5 second shots",
+    "camera": "locked-off or slow dolly, no whip pans, no drones",
+    "cuts": "straight cuts on action, occasional match cut on fabric",
+    "sound": "room tone, scissors, sewing machine, sparse felt piano",
+    "type_in_motion": "display serif, opacity fades only, 500ms"
+  },
+  "logo": {"wordmark": "Lumen & Loom", "file": null}
+}
