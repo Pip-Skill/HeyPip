@@ -2,7 +2,7 @@
 
 Pip is a creative studio in one Claude plugin: brand identity, design system, websites, posters and social graphics, photo art direction and image prompts, and video storyboards — all from one `brand.json`, so every piece looks like the same brand. It also ships engineering agents and commands (code review, TDD, build fixes, docs).
 
-This folder is the edition submitted to the Claude plugin directory. It has no hooks and leaves out the bundled web engine (`taste/`), so sites are built from `skills/heypip/references/web.md`. The full edition with the engine and hooks lives at the repository root: https://github.com/Pip-Skill/HeyPip
+This folder is the edition submitted to the Claude plugin directory. It has no hooks, no scripts and no bundled web engine: Claude does every step itself by the rules in `skills/heypip/references/`. The full edition with the engine and hooks lives at the repository root: https://github.com/Pip-Skill/HeyPip
 
 ## Install
 
@@ -17,7 +17,7 @@ This folder is the edition submitted to the Claude plugin directory. It has no h
 - `/heypip:site`, `/heypip:poster`, `/heypip:photo`, `/heypip:video`, `/heypip:campaign` — outputs.
 - `/heypip:review`, `/heypip:find`, `/heypip:help`.
 
-Or just say "hey pip, make a brand for my bakery". Scripts need Python 3; PDF/PNG export uses a local Chrome if present.
+Or just say "hey pip, make a brand for my bakery".
 
 ## Credits
 

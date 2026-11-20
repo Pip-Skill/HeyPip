@@ -315,7 +315,7 @@ const results = await client.ft.search('idx:markets', query)
 import { createClient } from 'redis'
 
 const client = createClient({
-  url: process.env.REDIS_URL
+  url: process.env.YOUR_REDIS_URL
 })
 
 await client.connect()

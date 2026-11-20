@@ -9,4 +9,4 @@ the search and brand-drafting code is Pip's own.
 
 Contents: styles (89), colour palettes per product type (192), font pairings (74), product → style
 reasoning (192), landing-page patterns (34), UX guidelines (120), app-interface rules, chart types (25),
-icons (105), motion presets, the Google Fonts catalogue (trimmed to family, category, subsets, styles) and per-stack rules for 22 stacks. The per-font licence file was left out; every Google Font is under the OFL or Apache licence.
+icons (105), motion presets, the Google Fonts catalogue (trimmed to family, category, subsets, styles) and per-stack rules for 22 stacks (12 in the directory edition). The per-font licence file was left out; every Google Font is under the OFL or Apache licence.

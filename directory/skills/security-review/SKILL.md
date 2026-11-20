@@ -23,18 +23,18 @@ This skill ensures all code follows security best practices and identifies poten
 
 #### ❌ NEVER Do This
 ```typescript
-const apiKey = "sk-proj-xxxxx"  // Hardcoded secret
-const dbPassword = "password123" // In source code
+const apiKey = "YOUR_API_KEY"  // Hardcoded secret (placeholder)
+const dbPassword = "YOUR_DB_PASSWORD" // In source code (placeholder)
 ```
 
 #### ✅ ALWAYS Do This
 ```typescript
-const apiKey = process.env.OPENAI_API_KEY
-const dbUrl = process.env.DATABASE_URL
+const apiKey = process.env.YOUR_API_KEY
+const dbUrl = process.env.YOUR_DATABASE_URL
 
 // Verify secrets exist
 if (!apiKey) {
-  throw new Error('OPENAI_API_KEY not configured')
+  throw new Error('YOUR_API_KEY not configured')
 }
 ```
 
@@ -433,7 +433,7 @@ test('requires authentication', async () => {
 // Test authorization
 test('requires admin role', async () => {
   const response = await fetch('/api/admin', {
-    headers: { Authorization: `Bearer {userToken}` }
+    headers: { Authorization: `Bearer YOUR_API_KEY` }
   })
   expect(response.status).toBe(403)
 })

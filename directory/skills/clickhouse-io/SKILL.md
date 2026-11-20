@@ -154,11 +154,11 @@ ORDER BY market_id, date;
 import { ClickHouse } from 'clickhouse'
 
 const clickhouse = new ClickHouse({
-  url: process.env.CLICKHOUSE_URL,
+  url: process.env.YOUR_CLICKHOUSE_URL,
   port: 8123,
   basicAuth: {
-    username: process.env.CLICKHOUSE_USER,
-    password: process.env.CLICKHOUSE_PASSWORD
+    username: process.env.YOUR_CLICKHOUSE_USER,
+    password: process.env.YOUR_CLICKHOUSE_PASSWORD
   }
 })
 
@@ -379,7 +379,7 @@ setInterval(etlPipeline, 60 * 60 * 1000)  // Every hour
 // Listen to PostgreSQL changes and sync to ClickHouse
 import { Client } from 'pg'
 
-const pgClient = new Client({ connectionString: process.env.DATABASE_URL })
+const pgClient = new Client({ connectionString: process.env.YOUR_DATABASE_URL })
 
 pgClient.query('LISTEN market_updates')
 

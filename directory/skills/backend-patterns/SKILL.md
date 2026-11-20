@@ -347,7 +347,7 @@ interface JWTPayload {
 
 export function verifyToken(token: string): JWTPayload {
   try {
-    const payload = jwt.verify(token, process.env.JWT_SECRET!) as JWTPayload
+    const payload = jwt.verify(token, process.env.YOUR_JWT_SECRET!) as JWTPayload
     return payload
   } catch (error) {
     throw new ApiError(401, 'Invalid token')

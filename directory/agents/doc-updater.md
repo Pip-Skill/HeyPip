@@ -241,7 +241,7 @@ npm install
 
 # Environment variables
 cp .env.example .env.local
-# Fill in: OPENAI_API_KEY, REDIS_URL, etc.
+# Fill in: YOUR_API_KEY, YOUR_REDIS_URL, etc.
 
 # Development
 npm run dev

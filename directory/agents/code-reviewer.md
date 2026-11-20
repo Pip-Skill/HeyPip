@@ -82,7 +82,7 @@ Issue: API key exposed in source code
 Fix: Move to environment variable
 
 const apiKey = "sk-abc123";  // ❌ Bad
-const apiKey = process.env.API_KEY;  // ✓ Good
+const apiKey = process.env.YOUR_API_KEY;  // ✓ Good
 ```
 
 ## Approval Criteria

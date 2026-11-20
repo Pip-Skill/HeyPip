@@ -134,7 +134,7 @@ All scripts are plain Python 3 with no dependencies (fetch_fonts.py also needs n
 Data from UI/UX Pro Max (MIT, see `library/uiux/NOTICE.md`): 89 styles, 192 palettes,
 74 font pairings, 192 product types with style reasoning and anti-patterns, 34 landing
 patterns, 120 UX guidelines, app-interface rules, 25 chart types, 105 icons, motion presets,
-the Google Fonts catalogue (family, category, scripts, styles) and rules for 22 stacks. Query it with `lookup.py`; never paste
+the Google Fonts catalogue (family, category, scripts, styles) and rules for 12 stacks (this edition). Query it with `lookup.py`; never paste
 rows into deliverables — decide, then write the decision into `brand.json` or the plan.
 
 ## Quick modes

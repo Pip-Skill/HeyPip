@@ -185,14 +185,14 @@ Search Security (Redis + OpenAI):
 
 ```javascript
 // ❌ CRITICAL: Hardcoded secrets
-const apiKey = "sk-proj-xxxxx"
+const apiKey = "YOUR_API_KEY"
 const password = "admin123"
 const token = "ghp_xxxxxxxxxxxx"
 
 // ✅ CORRECT: Environment variables
-const apiKey = process.env.OPENAI_API_KEY
+const apiKey = process.env.YOUR_API_KEY
 if (!apiKey) {
-  throw new Error('OPENAI_API_KEY not configured')
+  throw new Error('YOUR_API_KEY not configured')
 }
 ```
 
